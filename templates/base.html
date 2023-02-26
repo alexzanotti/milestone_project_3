@@ -71,3 +71,15 @@
       </div>
     </div>
   </nav>
+
+  <!-- base image below the navbar, containing the header title for each page -->
+  <div class="base_image">
+    <img src="{{ url_for('static', filename='img/recruitment.jpeg') }}" alt="Header image"">
+    <div class="base_central" id="headerTitle">
+      <h1>{% block header %}{% endblock %}</h1>
+    </div>
+  </div>
+
+  <!-- Block content -->
+  {% block content %}
+  {% endblock %}
