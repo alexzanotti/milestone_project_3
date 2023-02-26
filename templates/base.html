@@ -14,3 +14,60 @@
 </head>
 <!-- Body -->
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Navbar branding -->
+      <a class="navbar-brand" href="{{ url_for('index') }}">Recruitment</a>
+      <!-- Navbar toggle and collapsible button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar unordered list -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- Home page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <!-- Applicants page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('applicants') }}">Applicants</a>
+          </li>
+          <!-- Applicants apply page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('applicants_apply') }}">Applicants Apply</a>
+          </li>
+          <!-- Applicants applied page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('applicants_applied') }}">Applicants Applied</a>
+          </li>
+          <!-- Recruiters page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('recruiter') }}">Recruiters</a>
+          </li>
+          <!-- Recruiters edit page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('recruiter_edit') }}">Recruiters Edit</a>
+          </li>
+          <!-- Recruiters list page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('recruiter_list') }}">Recruiters List</a>
+          </li>
+          <!-- Recruiters listed page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('recruiter_listed') }}">Recruiters Listed</a>
+          </li>
+          <!-- Contact page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+          </li>
+          <!-- Contact sent page -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact_sent') }}">Contact Sent</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
