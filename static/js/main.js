@@ -83,5 +83,3 @@ function sendmail() {
       //the user will be re-directed to the contact_sent page upon submitting the contact form
       location.href = 'contact_sent.html';
 }
-
-
