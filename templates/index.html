@@ -24,5 +24,34 @@
     <!--Google maps div with a the "map" id-->
     <div id="map"></div>
   </section>
-  
+
+  <!--Cards to provide insight and provide links to other pages of the site -->
+  <section class="centered">
+    <h2>Our Pages</h2>
+    <p>Sed elementum arcu id ante vehicula, ut auctor ipsum ultrices. Sed tempus placerat egestas. Phasellus volutpat sem diam, in varius enim vestibulum et. Pellentesque rhoncus eleifend congue. Nam neque augue, ultrices et ante eu, malesuada consequat lacus. Pellentesque justo nisl, rutrum at mattis vitae, pharetra vel ipsum. Sed laoreet mauris quis odio euismod, aliquet tempus ante imperdiet.</p>
+  </section>
+  <!-- card-container div -->
+  <div class="row card-container">
+    <!-- Applicants page card -->
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Applicants Page</h5>
+          <p class="card-text">Maecenas lacus velit, dapibus vel cursus eget, mattis suscipit orci. Aenean lacinia euismod ultrices. Proin imperdiet non dolor eu congue. Donec ut odio molestie, interdum erat nec, facilisis erat. Nullam sit amet mauris id leo consequat egestas vitae vitae purus.</p>
+          <a href="{{ url_for('applicants') }}" class="btn btn-primary">Applicants Page</a>
+        </div>
+      </div>
+    </div>
+    <!-- Recruiters page card -->
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Recruiters Page</h5>
+          <p class="card-text">Maecenas lacus velit, dapibus vel cursus eget, mattis suscipit orci. Aenean lacinia euismod ultrices. Proin imperdiet non dolor eu congue. Donec ut odio molestie, interdum erat nec, facilisis erat. Nullam sit amet mauris id leo consequat egestas vitae vitae purus.</p>
+          <a href="{{ url_for('recruiter') }}" class="btn btn-primary">Recruiters Page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}
