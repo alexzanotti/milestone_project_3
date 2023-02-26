@@ -16,5 +16,10 @@
         "img_source": "img/finance.jpeg",
         "img_description": "Finance is the study and discipline of money, currency and capital assets. It is related to, but not synonymous with economics, which is the study of production, distribution, and consumption of money, assets, goods and services (the discipline of financial economics bridges the two).",
         "img_alt": "Image for Finance roles"
+      },
+      {
+        "img_name": "Programming",
+        "img_source": "img/programming.jpeg",
+        "img_description": "A computer programmer, sometimes referred to as a software developer, a software engineer, a programmer or a coder, is a person who creates computer programs — often for larger computer software.",
+        "img_alt": "Image for Programming roles"
       }
-  ]
