@@ -1,0 +1,43 @@
+/* || General styles */
+
+html {
+height: 100%;
+width: 100%;
+}
+
+/* || Header */
+
+.base_image {
+position: relative;
+text-align: center;
+color: white;
+}
+
+.base_central {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: red;
+font-size:2rem;
+}
+
+.base_image img {
+width: 100%;
+}
+
+/* || Footer */
+
+.footer-bottom {
+background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* || Index Page */
+.centered, .card-body {
+margin: 20px;
+text-align: center;
+}
+
+.card-container {
+margin: 20px;
+}
