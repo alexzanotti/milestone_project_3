@@ -32,7 +32,6 @@ width: 100%;
 background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* || Index Page */
 .centered, .card-body {
 margin: 20px;
 text-align: center;
@@ -41,3 +40,16 @@ text-align: center;
 .card-container {
 margin: 20px;
 }
+
+/* || Index Page */
+/* || Typography */
+/* || Base Page */
+/* || Applicants Page */
+/* || Applicants Apply Page */
+/* || Applicants Applied Page */
+/* || Recruiter Page */
+/* || Recruiter Edit Page */
+/* || Recruiter List Page */
+/* || Recruiter Listed Page */
+/* || Contact Page */
+/* || Contact Sent Page */
