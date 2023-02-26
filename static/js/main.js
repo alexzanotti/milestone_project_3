@@ -61,3 +61,27 @@ marker.addListener('click', function() {
     mapContent.open(map, this);
 });
 }
+
+/* Sending Email from Contact Section */
+(function () {
+    emailjs.init("5ozi6ayyg6gPAPxAQ");
+})();
+
+function sendmail() {
+    let fullName = document.getElementById("name").value;
+    let userEmail = document.getElementById("email").value;
+    let userMessage = document.getElementById("message").value;
+
+        var contactParams = {
+            from_name: fullName,
+            from_email: userEmail,
+            message: userMessage
+        };
+
+        emailjs.send('service_m38yb2j', 'template_ki89pno', contactParams).then(function (res) {})
+
+      //the user will be re-directed to the contact_sent page upon submitting the contact form
+      location.href = 'contact_sent.html';
+}
+
+
