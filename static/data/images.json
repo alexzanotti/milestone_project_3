@@ -6,20 +6,27 @@
       "img_alt": "Image for Artificial intelligence (AI) roles"
     },
     {
-        "img_name": "Cryptocurrencies",
-        "img_source": "img/crypto.jpeg",
-        "img_description": "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it.",
-        "img_alt": "Image for Cryptocurrencies roles"
-      },
-      {
-        "img_name": "Finance",
-        "img_source": "img/finance.jpeg",
-        "img_description": "Finance is the study and discipline of money, currency and capital assets. It is related to, but not synonymous with economics, which is the study of production, distribution, and consumption of money, assets, goods and services (the discipline of financial economics bridges the two).",
-        "img_alt": "Image for Finance roles"
-      },
-      {
-        "img_name": "Programming",
-        "img_source": "img/programming.jpeg",
-        "img_description": "A computer programmer, sometimes referred to as a software developer, a software engineer, a programmer or a coder, is a person who creates computer programs — often for larger computer software.",
-        "img_alt": "Image for Programming roles"
-      }
+      "img_name": "Cryptocurrencies",
+      "img_source": "img/crypto.jpeg",
+      "img_description": "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it.",
+      "img_alt": "Image for Cryptocurrencies roles"
+    },
+    {
+      "img_name": "Finance",
+      "img_source": "img/finance.jpeg",
+      "img_description": "Finance is the study and discipline of money, currency and capital assets. It is related to, but not synonymous with economics, which is the study of production, distribution, and consumption of money, assets, goods and services (the discipline of financial economics bridges the two).",
+      "img_alt": "Image for Finance roles"
+    },
+    {
+      "img_name": "Programming",
+      "img_source": "img/programming.jpeg",
+      "img_description": "A computer programmer, sometimes referred to as a software developer, a software engineer, a programmer or a coder, is a person who creates computer programs — often for larger computer software.",
+      "img_alt": "Image for Programming roles"
+    },
+    {
+      "img_name": "Project Management",
+      "img_source": "img/projectManagement.jpeg",
+      "img_description": "Project management is the process of leading the work of a team to achieve all project goals within the given constraints. This information is usually described in project documentation, created at the beginning of the development process. The primary constraints are scope, time, and budget.",
+      "img_alt": "Image for Project Management roles"
+    }
+  ]
