@@ -6,4 +6,43 @@
 {% block header %}{{ header }}{% endblock %}
 <!-- Content block that contains the main content of the page -->
 {% block content %}
+
+<!-- Iteration through listed job -->
+{% for applicant in applicants %}
+<!-- Main anchor tag, containing the job title, salary, location and company name -->
+<h2> <a class="btn btn-primary" data-bs-toggle="collapse" href="#applicants_collapsible" role="button"
+    aria-expanded="false" aria-controls="applicants_collapsible">{{ listing.job_title }} ｜ {{ listing.salary }} ｜ {{
+    listing.location }} ｜ {{
+    listing.company }}</a></h2>
+<!-- Collapsible div, containing further detail about the role, as well as an apply button -->
+<div class="collapse" id="applicants_collapsible">
+  <div class="card card-body">
+    <!-- Job title -->
+    <h3>Job Title</h3>
+    <p>{{ listing.job_title }}</p>
+    <!-- Salary -->
+    <h3>Salary</h3>
+    <p>{{ listing.salary }}</p>
+    <!-- Location -->
+    <h3>Location</h3>
+    <p>{{ listing.location }}</p>
+    <!-- Company name  -->
+    <h3>Company Name</h3>
+    <p>{{ listing.company }}</p>
+    <!-- Experience Required  -->
+    <h3>Experience Required</h3>
+    <p>{{ listing.experience_required }}</p>
+    <!-- Job description   -->
+    <h3>Job Description</h3>
+    <p>{{ listing.job_description }}</p>
+    <!-- Job requirements  -->
+    <h3>Job Requirements</h3>
+    <p>{{ listing.requirements }}</p>
+    <!--Button to apply for role - a modal is presented when clicked -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#applicants_apply">Apply</button>
+  </div>
+</div>
+
+{% endfor %}
 {% endblock %}
