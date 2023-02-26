@@ -63,4 +63,29 @@
       <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="list_job">List Job</button>
   </form>
   
+  <!--Modal for adding listing -->
+  <div class="modal fade" id="list_job" tabindex="-1" aria-labelledby="list_job" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!--Modal header -->
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">List Job</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!--Modal body -->
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Proin sodales, dolor ac
+          posuere viverra, lorem dolor vehicula ligula, nec iaculis orci leo nec justo. Curabitur massa arcu, rhoncus
+          vitae sodales ac, condimentum in dolor. Sed id purus aliquet, convallis est id, consequat elit.</p>
+        </div>
+        <!--Modal footer -->
+        <div class="modal-footer">
+          <!-- Button to close modal -->
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- Button to list job/submit form -->
+          <button type="submit" class="btn btn-primary">List Job</button>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
