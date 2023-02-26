@@ -39,6 +39,34 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDelete">Delete</button>
   </div>
 </div>
-
+<!--Modal for editing listing -->
+<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEdit" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!--Modal header -->
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalEdit">Edit Listing</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!--Modal header -->
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id urna tristique, tincidunt tortor sit amet,
+            lobortis tellus. Vestibulum diam sapien, mollis ut sem nec, scelerisque venenatis felis. Proin porta ornare
+            neque, eu tristique est vestibulum id. Vivamus at fermentum libero. Sed non quam sed augue condimentum
+            pulvinar. Sed non pharetra libero. Donec justo dolor, porta ac tempus non, luctus at metus. Cras tincidunt
+            rhoncus mollis. Aliquam interdum justo erat. Ut justo mi, vehicula vehicula aliquet quis, posuere quis risus.
+          </p>
+        </div>
+        <!--Modal header -->
+        <div class="modal-footer">
+          <!--Close modal -->
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- Edit button -->
+          <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn green accent-4">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 {% endfor %}
 {% endblock %}
