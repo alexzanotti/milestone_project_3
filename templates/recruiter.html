@@ -6,5 +6,39 @@
 {% block header %}{{ header }}{% endblock %}
 <!-- Content block that contains the main content of the page -->
 {% block content %}
+<!-- List a job  -->
+<a href="{{ url_for('recruiter_list') }}" class="btn btn-primary">List a Job</a>
+<!-- For loop, displaying each listing created in the database -->
+{% for listing in recruiter %}
+<!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
+<h2>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#recruiter_collapse" role="button" aria-expanded="false"
+    aria-controls="recruiter_collapse">{{ listing.job_title }} ｜ {{ listing.salary }} ｜ {{ listing.location }} ｜ {{
+    listing.company }}</a>
+</h2>
+<!--Collapsible body, containing all listing information -->
+<div class="collapse" id="recruiter_collapse">
+  <div class="card card-body">
+    <h3>Job Title</h3>
+    <p>{{ listing.job_title }}</p>
+    <h3>Salary</h3>
+    <p>{{ listing.salary }}</p>
+    <h3>Location</h3>
+    <p>{{ listing.location }}</p>
+    <h3>Company Name</h3>
+    <p>{{ listing.company }}</p>
+    <h3>Experience Required</h3>
+    <p>{{ listing.experience_required }}</p>
+    <h3>Job Description</h3>
+    <p>{{ listing.job_description }}</p>
+    <h3>Requirements</h3>
+    <p>{{ listing.requirements }}</p>
+    <!--Buttons for editing & deleting listing -->
+    <a href="{{ url_for('recruiter_applicants' }}" class="btn green accent-4">View Applicants</a>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdit">Edit</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDelete">Delete</button>
+  </div>
+</div>
 
+{% endfor %}
 {% endblock %}
