@@ -67,6 +67,33 @@
       </div>
     </div>
   </div>
-  
+  <!--Modal for deleting listing -->
+  <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="modalDelete" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!--Modal header -->
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalDelete">Delete Listing</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!--Modal body -->
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id urna tristique, tincidunt tortor sit amet,
+            lobortis tellus. Vestibulum diam sapien, mollis ut sem nec, scelerisque venenatis felis. Proin porta ornare
+            neque, eu tristique est vestibulum id. Vivamus at fermentum libero. Sed non quam sed augue condimentum
+            pulvinar. Sed non pharetra libero. Donec justo dolor, porta ac tempus non, luctus at metus. Cras tincidunt
+            rhoncus mollis. Aliquam interdum justo erat. Ut justo mi, vehicula vehicula aliquet quis, posuere quis risus.
+          </p>
+        </div>
+        <!--Modal footer -->
+        <div class="modal-footer">
+          <!--Close modal -->
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- Delete button-->
+          <a href="{{ url_for('recruiter_delete', listing_id=listing.id) }}" class="btn red">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endfor %}
 {% endblock %}
