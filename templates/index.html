@@ -54,4 +54,42 @@
     </div>
   </div>
 
+  <!--Image carousel, showcasing the various job types this website is tailored for -->
+  <div id="image_carousel" class="carousel slide">
+    <!--Image carousel, showcasing the various job types this website is tailored for -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Image 1"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="1" aria-label="Image 2"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="2" aria-label="Image 3"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="3" aria-label="Image 4"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="4" aria-label="Image 5"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="5" aria-label="Image 6"></button>
+    </div>
+    <!-- For loop, to iterate through each of the images.json objects -->
+    {% for image in images %}
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- Image element -->
+        <img src="{{ images.img_source }}" class="d-block w-100" alt="Image for {{ images.img_name }}">
+        <!-- Image caption -->
+        <div class="carousel-caption d-none d-md-block">
+          <!-- Image name -->
+          <h5>{{ images.img_name }}</h5>
+          <!-- Image description -->
+          <p>{{ images.img_description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <!-- Previous button -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#image_carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <!-- Next button -->
+      <button class="carousel-control-next" type="button" data-bs-target="#image_carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>    
 {% endblock %}
