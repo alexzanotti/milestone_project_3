@@ -27,3 +27,28 @@ def contact_sent():
 @app.route("/contact")
 def contact():
     return render_template("contact.html", title="Contact", header="Contact")
+
+# Recruiter Applicants Page
+@app.route("/recruiter_applicants")
+def recruiter_applicants():
+    return render_template("recruiter_applicants.html", title="Recruiter Applicants", header="Recruiter Applicants")
+
+# Recruiter Edit Page
+@app.route("/recruiter_edit")
+def recruiter_edit():
+    return render_template("recruiter_edit.html", title="Recruiter Edit", header="Recruiter Edit")
+
+# Recruiter List Page
+@app.route("/recruiter_list")
+def recruiter_list():
+    return render_template("recruiter_list.html", title="Recruiter List", header="Recruiter List")
+
+# Recruiter Listed Page
+@app.route("/recruiter_listed")
+def recruiter_listed():
+    return render_template("recruiter_listed.html", title="Recruiter Listed", header="Recruiter Listed")
+
+# Recruiter Page
+@app.route("/recruiter")
+def recruiter():
+    return render_template("recruiter.html", title="Recruiter", header="Recruiter")
