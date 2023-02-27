@@ -17,3 +17,13 @@ def applicants_apply():
 @app.route("/applicants")
 def applicants():
     return render_template("applicants.html", title="Applicants", header="Applicants")
+
+# Contact Sent Page
+@app.route("/contact_sent")
+def contact_sent():
+    return render_template("contact_sent.html", title="Contact Sent", header="Contact Sent")
+
+# Contact Page
+@app.route("/contact")
+def contact():
+    return render_template("contact.html", title="Contact", header="Contact")
