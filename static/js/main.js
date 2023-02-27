@@ -61,20 +61,20 @@ marker.addListener('click', function() {
     mapContent.open(map, this);
 });
 }
-
-/* Sending Email from Contact Section */
-(function () {
-    emailjs.init("5ozi6ayyg6gPAPxAQ");
-})();
+// (function () {
+      //  emailjs.init("5ozi6ayyg6gPAPxAQ");
+  //  })();
 
 function sendmail() {
     let fullName = document.getElementById("name").value;
     let userEmail = document.getElementById("email").value;
+    let userQuery = document.getElementById("query").value;
     let userMessage = document.getElementById("message").value;
 
         var contactParams = {
             from_name: fullName,
             from_email: userEmail,
+            query: userQuery,
             message: userMessage
         };
 

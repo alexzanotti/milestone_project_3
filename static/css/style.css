@@ -41,13 +41,64 @@ text-align: center;
 margin: 20px;
 }
 
+.main-footer {
+    padding-top: 20px;
+}
+
 /* || Index Page */
 /* || Typography */
 /* || Base Page */
 /* || Applicants Page */
+
+.listing-h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.listing-anchor {
+    width: 90%;
+}
 /* || Applicants Apply Page */
+
+.job-details {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.job-details h2 {
+    padding: 20px;
+}
+
+.your-details h2 {
+    padding: 20px;
+}
+
+
+.your-details {
+    text-align: center;
+}
+
+::placeholder, select {
+    text-align: center; 
+ }
+
+.apply-form {
+    width: 90%;
+    margin: 0 auto;
+ }
+
+.apply-form button {
+ padding: 10px 20%;
+}
+
 /* || Applicants Applied Page */
 /* || Recruiter Page */
+
+.list-job {
+    text-align: center;
+}
+
 /* || Recruiter Edit Page */
 /* || Recruiter List Page */
 /* || Recruiter Listed Page */

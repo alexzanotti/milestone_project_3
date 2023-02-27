@@ -7,31 +7,31 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Form to edit listing -->
-<form class="col s12" method="POST" action="">
+<form class="col s12" method="POST" action="{{ url_for('recruiter_edit', recruiter_id=recruiter.id) }}">
     <!-- category name -->
     <div class="mb-3">
     <label for="job_title" class="form-label">Job Title</label>
-    <input type="text" class="form-control" id="job_title" name="job_title" value="" required>
+    <input type="text" class="form-control" id="job_title" name="job_title" value="{{ listing.job_title }}" required>
   </div>
   <!-- Salary -->
   <div class="mb-3">
     <label for="salary" class="form-label">Salary</label>
-    <input type="text" class="form-control" id="salary" name="salary" value="" required>
+    <input type="text" class="form-control" id="salary" name="salary" value="{{ listing.salary }}" required>
   </div>
   <!-- Location -->
   <div class="mb-3">
     <label for="location" class="form-label">Location</label>
-    <input type="text" class="form-control" id="location" name="location" value="" required>
+    <input type="text" class="form-control" id="location" name="location" value="{{ listing.location }}" required>
   </div>
   <!-- Company Name -->
   <div class="mb-3">
     <label for="company" class="form-label">Company Name</label>
-    <input type="text" class="form-control" id="company" name="company" value="" required>
+    <input type="text" class="form-control" id="company" name="company" value="{{ listing.company }}" required>
   </div>
   <!-- Expereince Required -->
   <div class="mb-3">
     <label for="experience_required" class="form-label">Experience Required</label>
-    <select class="form-select" aria-label="Default select example" id="experience_required" name="experience_required" value=""
+    <select class="form-select" aria-label="Default select example" id="experience_required" name="experience_required" value="{{ listing.experience_required }}"
       required>
       <option value="" disabled selected>Select an option</option>
       <option value="1">Up to 1 Year</option>
@@ -45,18 +45,18 @@
   <!-- Job Description -->
   <div class="mb-3">
     <label for="job_description" class="form-label">Job Description</label>
-    <textarea class="form-control" id="job_description" name="job_description" value=""
+    <textarea class="form-control" id="job_description" name="job_description" value="{{ listing.job_description }}"
       rows="6" required></textarea>
     <!-- Job Requirements -->
     <div class="mb-3">
       <label for="requirements" class="form-label">Job Requirements</label>
-      <textarea class="form-control" id="requirements" name="requirements" value="" rows="6"
+      <textarea class="form-control" id="requirements" name="requirements" value="{{ listing.requirements }}" rows="6"
         required></textarea>
       <!-- Job Benefits -->
     </div>
     <div class="mb-3">
       <label for="benefits" class="form-label">Job Benefits</label>
-      <textarea class="form-control" id="benefits" name="benefits" value="" rows="6"
+      <textarea class="form-control" id="benefits" name="benefits" value="{{ listing.benefits }}" rows="6"
         required></textarea>
     </div>
     <!-- Apply button, which opens up a modal -->

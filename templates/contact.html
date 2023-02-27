@@ -21,7 +21,7 @@
     <!-- Query type -->
     <div class="mb-3">
       <label for="contactQuery" class="form-label">Query Type</label>
-      <select class="form-select" aria-label="contactQuery" id="contactQuery" name="contactQuery" required>
+      <select class="form-select" aria-label="contactQuery" id="query" name="contactQuery" required>
         <option value="" disabled selected>Select an option</option>
         <option value="Application">Application</option>
         <option value="Recruiter">Recruiter</option>
@@ -34,6 +34,21 @@
       <textarea class="form-control" id="message" rows="3" placeholder="Enter Message Here" required></textarea>
     </div>
     <!-- Send button -->
-    <button onclick="sendmail()" type="button" class="btn btn-primary">Send</button>
+    <button type="button" class="btn btn-primary btnSend">Send</button>
   </form>
+
+
+<script type="text/javascript">
+
+const btnSend = document.querySelector('.btnSend');
+
+(function send() {
+    emailjs.init("5ozi6ayyg6gPAPxAQ");
+})();
+
+btnSend.addEventListener('click', send); 
+</script>
+
 {% endblock %}
+
+
