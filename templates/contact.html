@@ -7,7 +7,7 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Contact form -->
-<form>
+<form method="POST">
     <!-- Name -->
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
@@ -34,21 +34,8 @@
       <textarea class="form-control" id="message" rows="3" placeholder="Enter Message Here" required></textarea>
     </div>
     <!-- Send button -->
-    <button type="button" class="btn btn-primary btnSend">Send</button>
+    <button type="submit" class="btn btn-primary" onclick="sendmail()">Send</button>
   </form>
-
-
-<script type="text/javascript">
-
-const btnSend = document.querySelector('.btnSend');
-
-(function send() {
-    emailjs.init("5ozi6ayyg6gPAPxAQ");
-})();
-
-btnSend.addEventListener('click', send); 
-</script>
-
 {% endblock %}
 
 

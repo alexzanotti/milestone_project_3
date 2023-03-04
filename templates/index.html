@@ -22,7 +22,7 @@
     <h2>Our Locations</h2>
     <p>You can find our offices in the following locations:</p>
     <!--Google maps div with a the "map" id-->
-    <div id="map"></div>
+    <div id="map" style="position: relative;overflow: hidden;height:50vh;"></div>
   </section>
 
   <!--Cards to provide insight and provide links to other pages of the site -->
@@ -92,4 +92,8 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>    
+{% endblock %}
+{% block script %}
+  <!-- Link to Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9c20tdxjnGx_-SxhniUx9Y25igBOcYPM&callback=recruitmentMap"></script>
 {% endblock %}

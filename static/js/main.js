@@ -1,24 +1,25 @@
 //The location of the recruitment centres
 var LatitudeLongitude = [{
-    Latitude: 51.503193,
-    Longitude: -0.131019
+    lat: 51.50551714132441,
+    lng: -0.1651967952227699
 },
 {
-    Latitude: 40.779303,
-    Longitude: -73.967759
+    lat: 40.77603773404491, 
+    lng: -73.97239918809241
 },
 {
-    Latitude: -33.864194,
-    Longitude: 151.214136
+    lat: -33.8637228711469, 
+    lng: 151.2176002382263
 },
 {
-    Latitude: 25.204849,
-    Longitude: 55.270782
+    lat: 25.23462190325834, 
+    lng: 55.29889402751128    
 },
 {
-    Latitude: -22.906847,
-    Longitude: -43.172897
+    lat: -22.949002295746187, 
+    lng: -43.15544855337829
 }];
+
 
 //The country, phone number and email address content for each recruitment centre
 var infoWindowContent = [
@@ -61,10 +62,6 @@ marker.addListener('click', function() {
     mapContent.open(map, this);
 });
 }
-// (function () {
-      //  emailjs.init("5ozi6ayyg6gPAPxAQ");
-  //  })();
-
 function sendmail() {
     let fullName = document.getElementById("name").value;
     let userEmail = document.getElementById("email").value;
@@ -81,5 +78,5 @@ function sendmail() {
         emailjs.send('service_m38yb2j', 'template_ki89pno', contactParams).then(function (res) {})
 
       //the user will be re-directed to the contact_sent page upon submitting the contact form
-      location.href = 'contact_sent.html';
+      //location.href = '{{ url_for('contact_sent') }}';
 }

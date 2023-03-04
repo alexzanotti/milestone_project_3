@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 if os.path.exists("env.py"):
     import env
 
@@ -28,15 +28,18 @@ def applicants_apply():
 def applicants():
     return render_template("applicants.html", title="Applicants", header="Applicants")
 
+# Contact Page
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if request.method == "POST":
+        return redirect("contact_sent")
+    else:
+        return render_template("contact.html", title="Contact", header="Contact")
+
 # Contact Sent Page
 @app.route("/contact_sent")
 def contact_sent():
     return render_template("contact_sent.html", title="Contact Sent", header="Contact Sent")
-
-# Contact Page
-@app.route("/contact")
-def contact():
-    return render_template("contact.html", title="Contact", header="Contact")
 
 # Recruiter Applicants Page
 @app.route("/recruiter_applicants")
