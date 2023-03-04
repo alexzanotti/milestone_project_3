@@ -11,7 +11,11 @@ app.secret_key = os.environ.get("SECRET_KEY")
 # Home Page
 @app.route("/")
 def index():
-    return render_template("index.html", title="Home", header="Home")
+    images = []
+    with open("static/data/images.json", "r") as json_images:
+        images = json.load(json_images)
+    return render_template("index.html", title="Home", header="Home",  images=images)
+
 
 # Applicants Applied Page
 @app.route("/applicants_applied")
@@ -52,9 +56,12 @@ def recruiter_edit():
     return render_template("recruiter_edit.html", title="Recruiter Edit", header="Recruiter Edit")
 
 # Recruiter List Page
-@app.route("/recruiter_list")
+@app.route("/recruiter_list", methods=["GET", "POST"])
 def recruiter_list():
-    return render_template("recruiter_list.html", title="Recruiter List", header="Recruiter List")
+    if request.method == "POST":
+        return redirect("recruiter_listed")
+    else:
+        return render_template("recruiter_list.html", title="Recruiter List", header="Recruiter List")
 
 # Recruiter Listed Page
 @app.route("/recruiter_listed")

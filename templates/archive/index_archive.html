@@ -1,0 +1,165 @@
+<!-- This line extends a base.html file -->
+{% extends "base.html" %}
+<!-- Title block that displays the title of the page -->
+{% block title %}{{ title }}{% endblock %}
+<!-- Header block that displays the header of the page -->
+{% block header %}{{ header }}{% endblock %}
+<!-- Content block that contains the main content of the page -->
+{% block content %}
+<!-- About section -->
+<section class="centered">
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu purus volutpat, ultrices felis eu,
+      pellentesque neque. Pellentesque rhoncus condimentum ligula, vel semper felis condimentum ut. In iaculis tempor
+      tincidunt. Vestibulum vel sapien non nisl euismod finibus. Cras ultrices pretium ligula, efficitur tempor erat
+      gravida at. Aenean ut iaculis mi, sed posuere mi. Cras metus mauris, tincidunt sit amet mollis iaculis, suscipit
+      quis justo. Sed nec est ac nulla euismod sollicitudin et nec neque. Nullam placerat consequat vestibulum. Donec
+      euismod leo non ante pretium aliquam. Morbi et odio lobortis, ullamcorper nisl vel, eleifend arcu. Curabitur porta
+      laoreet felis.</p>
+  </section>
+<!--Google maps section-->
+<section class="centered">
+    <h2>Our Locations</h2>
+    <p>You can find our offices in the following locations:</p>
+    <!--Google maps div with a the "map" id-->
+    <div id="map" style="position: relative;overflow: hidden;height:50vh;"></div>
+  </section>
+
+  <!--Cards to provide insight and provide links to other pages of the site -->
+  <section class="centered">
+    <h2>Our Pages</h2>
+    <p>Sed elementum arcu id ante vehicula, ut auctor ipsum ultrices. Sed tempus placerat egestas. Phasellus volutpat sem diam, in varius enim vestibulum et. Pellentesque rhoncus eleifend congue. Nam neque augue, ultrices et ante eu, malesuada consequat lacus. Pellentesque justo nisl, rutrum at mattis vitae, pharetra vel ipsum. Sed laoreet mauris quis odio euismod, aliquet tempus ante imperdiet.</p>
+  </section>
+  <!-- card-container div -->
+  <div class="row card-container">
+    <!-- Applicants page card -->
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Applicants Page</h5>
+          <p class="card-text">Maecenas lacus velit, dapibus vel cursus eget, mattis suscipit orci. Aenean lacinia euismod ultrices. Proin imperdiet non dolor eu congue. Donec ut odio molestie, interdum erat nec, facilisis erat. Nullam sit amet mauris id leo consequat egestas vitae vitae purus.</p>
+          <a href="{{ url_for('applicants') }}" class="btn btn-primary">Applicants Page</a>
+        </div>
+      </div>
+    </div>
+    <!-- Recruiters page card -->
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Recruiters Page</h5>
+          <p class="card-text">Maecenas lacus velit, dapibus vel cursus eget, mattis suscipit orci. Aenean lacinia euismod ultrices. Proin imperdiet non dolor eu congue. Donec ut odio molestie, interdum erat nec, facilisis erat. Nullam sit amet mauris id leo consequat egestas vitae vitae purus.</p>
+          <a href="{{ url_for('recruiter') }}" class="btn btn-primary">Recruiters Page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <img src="{{ images.img_source }}" class="d-block w-100" alt="Image for {{ images.img_name }}">
+  <!--Image carousel, showcasing the various job types this website is tailored for -->
+  <!--
+  {% for image in images %}
+  <img src="{{ image.img_source }}" class="d-block w-100" alt="Image for {{ image.img_name }}">
+  {% endfor %}-->
+
+
+  <!--
+  <div id="image_carousel" class="carousel slide">
+    <!--Image carousel, showcasing the various job types this website is tailored for -->
+    <!--
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Image 1"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="1" aria-label="Image 2"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="2" aria-label="Image 3"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="3" aria-label="Image 4"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="4" aria-label="Image 5"></button>
+      <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="5" aria-label="Image 6"></button>
+    </div>
+    <!-- For loop, to iterate through each of the images.json objects -->
+    <!--
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- Image element -->
+        <!--
+        <img src="{{ image.img_source }}" class="d-block w-100" alt="Image for {{ image.img_name }}">
+        <!-- Image caption -->
+        <!--
+        <div class="carousel-caption d-none d-md-block">
+          <!-- Image name -->
+          <!--
+          <h5>{{ image.img_name }}</h5>
+          <!-- Image description -->
+          <!--
+          <p>{{ image.img_description }}</p>
+        </div>
+      </div>
+      
+      <!-- Previous button -->
+      <!--
+      <button class="carousel-control-prev" type="button" data-bs-target="#image_carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <!-- Next button -->
+      <!--
+      <button class="carousel-control-next" type="button" data-bs-target="#image_carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>  -->   
+    
+{% endblock %}
+{% block script %}
+  <!-- Link to Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9c20tdxjnGx_-SxhniUx9Y25igBOcYPM&callback=recruitmentMap"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="image_carousel" class="carousel slide">
+  <!--Image carousel, showcasing the various job types this website is tailored for -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Image 1"></button>
+    <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="1" aria-label="Image 2"></button>
+    <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="2" aria-label="Image 3"></button>
+    <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="3" aria-label="Image 4"></button>
+    <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="4" aria-label="Image 5"></button>
+    <button type="button" data-bs-target="#image_carousel" data-bs-slide-to="5" aria-label="Image 6"></button>
+  </div>
+  <!-- For loop, to iterate through each of the images.json objects -->
+  {% for image in images %}  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <!-- Image element -->
+      <img src="{{ image.img_source }}" class="d-block w-100" alt="Image for {{ image.img_name }}">
+      <!-- Image caption -->
+      <div class="carousel-caption d-none d-md-block">
+        <!-- Image name -->
+        <h5>{{ image.img_name }}</h5>
+        <!-- Image description -->
+        <p>{{ image.img_description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+    <!-- Previous button -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#image_carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <!-- Next button -->
+    <button class="carousel-control-next" type="button" data-bs-target="#image_carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>    

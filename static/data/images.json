@@ -1,31 +1,31 @@
 [
     {
       "img_name": "AI",
-      "img_source": "img/ai.jpeg",
+      "img_source": "https://api.time.com/wp-content/uploads/2022/11/GettyImages-1358149692.jpg",
       "img_description": "Artificial intelligence (AI) is intelligence—perceiving, synthesizing, and inferring information—demonstrated by machines, as opposed to intelligence displayed by non-human animals and humans.",
       "img_alt": "Image for Artificial intelligence (AI) roles"
     },
     {
       "img_name": "Cryptocurrencies",
-      "img_source": "img/crypto.jpeg",
+      "img_source": "https://www.nasdaq.com/sites/acquia.prod/files/2022/12/07/cryptocurrency-Nuthawut-adobe.jpeg?1383427791",
       "img_description": "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it.",
       "img_alt": "Image for Cryptocurrencies roles"
     },
     {
       "img_name": "Finance",
-      "img_source": "img/finance.jpeg",
+      "img_source": "https://paas-s3-broker-prod-lon-2edbd31f-65e0-4d35-9755-fde7c3b1b292.s3.amazonaws.com/images/Financial_HdD76AH.original.png",
       "img_description": "Finance is the study and discipline of money, currency and capital assets. It is related to, but not synonymous with economics, which is the study of production, distribution, and consumption of money, assets, goods and services (the discipline of financial economics bridges the two).",
       "img_alt": "Image for Finance roles"
     },
     {
       "img_name": "Programming",
-      "img_source": "img/programming.jpeg",
+      "img_source": "https://wallpapers.com/images/hd/code-programming-symbols-letters-texture-8nlsi3q9gcjh6m98.jpg",
       "img_description": "A computer programmer, sometimes referred to as a software developer, a software engineer, a programmer or a coder, is a person who creates computer programs — often for larger computer software.",
       "img_alt": "Image for Programming roles"
     },
     {
       "img_name": "Project Management",
-      "img_source": "img/projectManagement.jpeg",
+      "img_source": "https://media.istockphoto.com/id/1317443847/photo/project-manager-working-on-gantt-chart-to-update-the-schedule-tasks-and-milestones-progress.jpg?b=1&s=170667a&w=0&k=20&c=DMGPMqgQuaUTiwbF_zzOQ1u15_y-uTP7r5zoDX7pYU4=",
       "img_description": "Project management is the process of leading the work of a team to achieve all project goals within the given constraints. This information is usually described in project documentation, created at the beginning of the development process. The primary constraints are scope, time, and budget.",
       "img_alt": "Image for Project Management roles"
     }
