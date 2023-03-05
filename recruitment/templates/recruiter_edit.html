@@ -7,83 +7,60 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Form to edit listing -->
-<form class="col s12" method="POST" action="">
-    <!-- category name -->
-    <div class="mb-3">
+<form method="POST" action="{{ url_for('recruiter_edit', listing_id=listing.id) }}">
+  <!-- Job title -->
+  <div class="mb-3">
     <label for="job_title" class="form-label">Job Title</label>
-    <input type="text" class="form-control" id="job_title" name="job_title" value="" required>
+    <input type="text" class="form-control" id="job_title" name="job_title" value="{{ listing.job_title }}" required>
   </div>
   <!-- Salary -->
   <div class="mb-3">
     <label for="salary" class="form-label">Salary</label>
-    <input type="text" class="form-control" id="salary" name="salary" value="" required>
+    <input type="text" class="form-control" id="salary" name="salary" value="{{ listing.salary }}" required>
   </div>
   <!-- Location -->
   <div class="mb-3">
     <label for="location" class="form-label">Location</label>
-    <input type="text" class="form-control" id="location" name="location" value="" required>
+    <input type="text" class="form-control" id="location" name="location" value="{{ listing.location }}" required>
   </div>
   <!-- Company Name -->
   <div class="mb-3">
     <label for="company" class="form-label">Company Name</label>
-    <input type="text" class="form-control" id="company" name="company" value="" required>
+    <input type="text" class="form-control" id="company" name="company" value="{{ listing.company }}" required>
   </div>
   <!-- Expereince Required -->
   <div class="mb-3">
     <label for="experience_required" class="form-label">Experience Required</label>
-    <select class="form-select" aria-label="Default select example" id="experience_required" name="experience_required" value=""
+    <select class="form-select" aria-label="Default select example" id="experience_required" name="experience_required"
       required>
-      <option value="" disabled selected>Select an option</option>
-      <option value="1">Up to 1 Year</option>
-      <option value="2">1 - 2 Years</option>
-      <option value="3">2 - 3 Years</option>
-      <option value="4">3 - 4 Years</option>
-      <option value="5">4 - 5 Years</option>
-      <option value="6">Over 5 Years</option>
+      <option selected>{{ listing.experience_required }}</option>
+      <option value="Up to 1 Year">Up to 1 Year</option>
+      <option value="1 - 2 Years">1 - 2 Years</option>
+      <option value="2 - 3 Years">2 - 3 Years</option>
+      <option value="3 - 4 Years">3 - 4 Years</option>
+      <option value="4 - 5 Years">4 - 5 Years</option>
+      <option value="Over 5 Years<">Over 5 Years</option>
     </select>
   </div>
   <!-- Job Description -->
   <div class="mb-3">
     <label for="job_description" class="form-label">Job Description</label>
-    <textarea class="form-control" id="job_description" name="job_description" value=""
-      rows="6" required></textarea>
+    <textarea class="form-control" id="job_description" name="job_description"
+      rows="6" required>{{- listing.job_description -}}</textarea>
+  </div>
     <!-- Job Requirements -->
     <div class="mb-3">
       <label for="requirements" class="form-label">Job Requirements</label>
-      <textarea class="form-control" id="requirements" name="requirements" value="" rows="6"
-        required></textarea>
+      <textarea class="form-control" id="requirements" name="requirements" rows="6"
+        required>{{- listing.requirements -}}</textarea>
       <!-- Job Benefits -->
     </div>
     <div class="mb-3">
       <label for="benefits" class="form-label">Job Benefits</label>
-      <textarea class="form-control" id="benefits" name="benefits" value="" rows="6"
-        required></textarea>
+      <textarea class="form-control" id="benefits" name="benefits" rows="6"
+        required>{{- listing.benefits -}}</textarea>
     </div>
-    <!-- Apply button, which opens up a modal -->
-  <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="recruiter_edit">Edit Listing</button>
+    <!-- Button to open modal -->
+    <button class="btn btn-primary" type="submit">Edit Listing</button>
 </form>
-
-<!-- Listing edit modal -->
-<div class="modal fade" id="recruiter_edit" tabindex="-1" aria-labelledby="recruiter_edit" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- Modal header -->
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="edit_modal_header">Edit</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <!-- Modal body -->
-        <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Proin sodales, dolor ac
-          posuere viverra, lorem dolor vehicula ligula, nec iaculis orci leo nec justo. Curabitur massa arcu, rhoncus
-          vitae sodales ac, condimentum in dolor. Sed id purus aliquet, convallis est id, consequat elit.</p>
-        </div>
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Edit Listing</button>
-        </div>
-      </div>
-    </div>
-  </div>
 {% endblock %}

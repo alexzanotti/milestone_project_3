@@ -53,10 +53,30 @@ def recruiter_applicants():
     return render_template("recruiter_applicants.html", title="Recruiter Applicants", header="Recruiter Applicants")
 
 # Recruiter Edit Page
-@app.route("/recruiter_edit")
-def recruiter_edit():
-    return render_template("recruiter_edit.html", title="Recruiter Edit", header="Recruiter Edit")
+@app.route("/recruiter_edit/<int:listing_id>", methods=["GET", "POST"])
+def recruiter_edit(listing_id):
+    listing = Listing.query.get_or_404(listing_id)
+    if request.method == "POST":
+        listing.job_title=request.form.get("job_title"),
+        listing.salary=request.form.get("salary"),
+        listing.location=request.form.get("location"),
+        listing.company=request.form.get("company"),
+        listing.experience_required=request.form.get("experience_required"),
+        listing.job_description=request.form.get("job_description"),
+        listing.requirements=request.form.get("requirements"),
+        listing.benefits=request.form.get("benefits")
+        db.session.commit()
+        return redirect(url_for("recruiter"))
+    return render_template("recruiter_edit.html", title="Recruiter Edit", header="Recruiter Edit", listing=listing)
 
+# Recruiter Delete Page
+@app.route("/recruiter_delete/<int:listing_id>")
+def recruiter_delete(listing_id):
+    listing = Listing.query.get_or_404(listing_id)
+    db.session.delete(listing)
+    db.session.commit()
+    return redirect(url_for("recruiter"))
+    
 # Recruiter List Page
 @app.route("/recruiter_list", methods=["GET", "POST"])
 def recruiter_list():
