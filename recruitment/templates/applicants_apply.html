@@ -10,47 +10,43 @@
 <div class="job-details">
 <h2>Job Details</h2>
 <!-- Job title -->
-<h3>Job Title</h3>
-<p>listing.job_title</p>
-<!-- Salary -->
-<h3>Salary</h3>
-<p>listing.salary</p>
-<!-- Location -->
-<h3>Location</h3>
-<p>listing.location</p>
-<!-- Company name  -->
-<h3>Company Name</h3>
-<p>listing.company</p>
-<!-- Experience Required  -->
-<h3>Experience Required</h3>
-<p>listing.experience_required</p>
-<!-- Job description   -->
-<h3>Job Description</h3>
-<p>listing.job_description</p>
-<!-- Job requirements  -->
-<h3>Job Requirements</h3>
-<p>listing.requirements</p>
+  <h3>Job Title</h3>
+  <p>{{ listing.job_title }}</p>
+  <h3>Salary</h3>
+  <p>&#65505;{{ listing.salary }}</p>
+  <h3>Location</h3>
+  <p>{{ listing.location }}</p>
+  <h3>Company Name</h3>
+  <p>{{ listing.company }}</p>
+  <h3>Experience Required</h3>
+  <p>{{ listing.experience_required }}</p>
+  <h3>Job Description</h3>
+  <p>{{ listing.job_description }}</p>
+  <h3>Requirements</h3>
+  <p>{{ listing.requirements }}</p>
+  <h3>Benefits</h3>
+  <p>{{ listing.benefits }}</p>
 </div>
 
 <!-- The users details are captured in the below form -->
 <div class="your-details">
 <h2>Your Details</h2>
-<form class="apply-form" method="POST" action="{{ url_for('applicants_apply') }}">
+<form class="apply-form" method="POST" action="{{ url_for('applicants_apply', listing_id=listing.id) }}">
   <!-- Applicants name -->
   <div class="mb-3">
-    <label for="user_name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Enter Name" required>
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
   </div>
   <!-- Applicants phone number -->
   <div class="mb-3">
-    <label for="phone_number" class="form-label">Phone Number</label>
-    <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="Enter Phone Number"
+    <label for="phone" class="form-label">Phone Number</label>
+    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number"
       pattern="[0-9]{11}" required>
   </div>
   <!-- Applicants email address -->
   <div class="mb-3">
-    <label for="email_address" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email_address" name="email_address" placeholder="Enter Email Address"
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email Address"
       required>
   </div>
   <!-- Applicants experience level -->
@@ -84,31 +80,8 @@
     <textarea class="form-control" id="work_experience" name="work_experience" placeholder="Enter your Work Experience"
       rows="3" required></textarea>
   </div>
-  <!-- Apply button, which opens up a modal -->
-  <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="application_apply">Apply</button>
+  <button class="btn btn-primary" type="submit">List Job</button>
 </form>
 </div>
-<!-- Application Modal -->
-<div class="modal fade" id="application_apply" tabindex="-1" aria-labelledby="application_apply" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal header -->
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Apply</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <!-- Modal body -->
-      <div class="modal-body">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Proin sodales, dolor ac
-        posuere viverra, lorem dolor vehicula ligula, nec iaculis orci leo nec justo. Curabitur massa arcu, rhoncus
-        vitae sodales ac, condimentum in dolor. Sed id purus aliquet, convallis est id, consequat elit.
-      </div>
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Apply</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 {% endblock %}

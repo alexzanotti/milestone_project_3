@@ -12,40 +12,68 @@ def index():
         images = json.load(json_images)
     return render_template("index.html", title="Home", header="Home",  images=images)
 
+# Applicants Page
+@app.route("/applicants")
+def applicants():
+    applicants = list(Listing.query.order_by(Listing.id).all())
+    return render_template("applicants.html", title="Applicants", header="Applicants", applicants=applicants)
+
+# Applicants Apply Page
+@app.route("/applicants_apply/<listing_id>", methods=["GET", "POST"])
+def applicants_apply(listing_id):
+    listing = Listing.query.get_or_404(listing_id)
+    if request.method == "POST":
+        applicant = Applicant(
+            name=request.form.get("name"),
+            phone=request.form.get("phone"),
+            email=request.form.get("email"),
+            experience_level=request.form.get("experience_level"),
+            personal_statement=request.form.get("personal_statement"),
+            education=request.form.get("education"),
+            work_experience=request.form.get("work_experience"),
+            listing=listing
+        )
+        db.session.add(applicant)
+        db.session.commit()
+        return redirect("applicants_applied")
+    else:
+        return render_template("applicants_apply.html", title="Apply", header="Apply", listing=listing)
 
 # Applicants Applied Page
 @app.route("/applicants_applied")
 def applicants_applied():
     return render_template("applicants_applied.html", title="Applicants Applied", header="Applicants Applied")
 
-# Applicants Apply Page
-@app.route("/applicants_apply")
-def applicants_apply():
-    return render_template("applicants_apply.html", title="Apply", header="Apply")
-
-# Applicants Page
-@app.route("/applicants")
-def applicants():
-    return render_template("applicants.html", title="Applicants", header="Applicants")
-
-# Contact Page
-@app.route("/contact", methods=["GET", "POST"])
-def contact():
-    if request.method == "POST":
-        return redirect("contact_sent")
-    else:
-        return render_template("contact.html", title="Contact", header="Contact")
-
-# Contact Sent Page
-@app.route("/contact_sent")
-def contact_sent():
-    return render_template("contact_sent.html", title="Contact Sent", header="Contact Sent")
-
 # Recruiter Page
 @app.route("/recruiter")
 def recruiter():
     recruiter = list(Listing.query.order_by(Listing.id).all())
     return render_template("recruiter.html", title="Recruiter", header="Recruiter", recruiter=recruiter)
+    
+# Recruiter List Page
+@app.route("/recruiter_list", methods=["GET", "POST"])
+def recruiter_list():
+    if request.method == "POST":
+        recruiter = Listing(
+        job_title=request.form.get("job_title"),
+        salary=request.form.get("salary"),
+        location=request.form.get("location"),
+        company=request.form.get("company"),
+        experience_required=request.form.get("experience_required"),
+        job_description=request.form.get("job_description"),
+        requirements=request.form.get("requirements"),
+        benefits=request.form.get("benefits")
+        )
+        db.session.add(recruiter)
+        db.session.commit()
+        return redirect("recruiter_listed")
+    else:
+        return render_template("recruiter_list.html", title="Recruiter List", header="Recruiter List")
+
+# Recruiter Listed Page
+@app.route("/recruiter_listed")
+def recruiter_listed():
+    return render_template("recruiter_listed.html", title="Recruiter Listed", header="Recruiter Listed")
 
 # Recruiter Applicants Page
 @app.route("/recruiter_applicants")
@@ -76,28 +104,16 @@ def recruiter_delete(listing_id):
     db.session.delete(listing)
     db.session.commit()
     return redirect(url_for("recruiter"))
-    
-# Recruiter List Page
-@app.route("/recruiter_list", methods=["GET", "POST"])
-def recruiter_list():
-    if request.method == "POST":
-        recruiter = Listing(
-          job_title=request.form.get("job_title"),
-          salary=request.form.get("salary"),
-          location=request.form.get("location"),
-          company=request.form.get("company"),
-          experience_required=request.form.get("experience_required"),
-          job_description=request.form.get("job_description"),
-          requirements=request.form.get("requirements"),
-          benefits=request.form.get("benefits")
-        )
-        db.session.add(recruiter)
-        db.session.commit()
-        return redirect("recruiter_listed")
-    else:
-        return render_template("recruiter_list.html", title="Recruiter List", header="Recruiter List")
 
-# Recruiter Listed Page
-@app.route("/recruiter_listed")
-def recruiter_listed():
-    return render_template("recruiter_listed.html", title="Recruiter Listed", header="Recruiter Listed")
+# Contact Page
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if request.method == "POST":
+        return redirect("contact_sent")
+    else:
+        return render_template("contact.html", title="Contact", header="Contact")
+
+# Contact Sent Page
+@app.route("/contact_sent")
+def contact_sent():
+    return render_template("contact_sent.html", title="Contact Sent", header="Contact Sent")

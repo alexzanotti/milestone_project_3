@@ -15,7 +15,7 @@
   <!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
   <h2 class="listing-h2">
     <a class="btn btn-primary" data-bs-toggle="collapse" href="#recruiter_collapse_{{ loop.index }}" role="button" aria-expanded="false"
-      aria-controls="recruiter_collapse_{{ loop.index }}">{{ listing.job_title }} ｜ &#65505;{{ listing.salary }} ｜{{ listing.location }} ｜ {{ listing.company }}</a>
+      aria-controls="recruiter_collapse_{{ loop.index }}">{{ listing.job_title }} ｜ &#65505;{{ listing.salary }} ｜ {{ listing.location }} ｜ {{ listing.company }}</a>
   </h2>
   <!--Collapsible body, containing all listing information -->
   <div class="collapse" id="recruiter_collapse_{{ loop.index }}">
@@ -39,7 +39,6 @@
       <!--Buttons for editing & deleting listing -->
       <a href="{{ url_for('recruiter_edit', listing_id=listing.id) }}" class="btn btn-primary">Edit</a>
       <a href="{{ url_for('recruiter_delete', listing_id=listing.id) }}" class="btn btn-primary">Delete</a>
-
       <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdit">View Applicants</button>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDelete">Delete</button>-->
     </div>
