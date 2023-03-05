@@ -1,8 +1,8 @@
 import os
 import json
 from flask import Flask, render_template, request, redirect, url_for
-from taskmanager import app, db
-from taskmanager.data_models import Listing, Applicant
+from recruitment import app, db
+from recruitment.data_models import Listing, Applicant
 if os.path.exists("env.py"):
     import env
 
@@ -74,10 +74,3 @@ def recruiter_listed():
 @app.route("/recruiter")
 def recruiter():
     return render_template("recruiter.html", title="Recruiter", header="Recruiter")
-
-
-if __name__ == "__main__":
-    app.run(
-        host=os.environ.get("IP", "0.0.0.0"),
-        port=int(os.environ.get("PORT", "5000")),
-        debug=True)
