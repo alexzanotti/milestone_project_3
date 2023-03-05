@@ -7,7 +7,7 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Form to list  -->
-<form method="POST">
+<form method="POST" action="{{ url_for('recruiter_list') }}">
     <!-- Job title -->
     <div class="mb-3">
       <label for="job_title" class="form-label">Job Title</label>
@@ -16,17 +16,17 @@
     <!-- Salary -->
     <div class="mb-3">
       <label for="salary" class="form-label">Salary</label>
-      <input type="text" class="form-control" id="salary" name="salary" placeholder="Enter Job Title" required>
+      <input type="text" class="form-control" id="salary" name="salary" placeholder="Enter Salary" required>
     </div>
     <!-- Location -->
     <div class="mb-3">
       <label for="location" class="form-label">Location</label>
-      <input type="text" class="form-control" id="location" name="location" placeholder="Enter Job Title" required>
+      <input type="text" class="form-control" id="location" name="location" placeholder="Enter Location" required>
     </div>
     <!-- Company Name -->
     <div class="mb-3">
       <label for="company" class="form-label">Company Name</label>
-      <input type="text" class="form-control" id="company" name="company" placeholder="Enter Job Title" required>
+      <input type="text" class="form-control" id="company" name="company" placeholder="Enter Company Name" required>
     </div>
     <!-- Expereince Required -->
     <div class="mb-3">
@@ -60,32 +60,6 @@
           required></textarea>
       </div>
       <!-- Button to open modal -->
-      <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="list_job">List Job</button>
+      <button class="btn btn-primary" type="submit">List Job</button>
   </form>
-  
-  <!--Modal for adding listing -->
-  <div class="modal fade" id="list_job" tabindex="-1" aria-labelledby="list_job" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!--Modal header -->
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">List Job</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <!--Modal body -->
-        <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in quam dolor. Proin sodales, dolor ac
-          posuere viverra, lorem dolor vehicula ligula, nec iaculis orci leo nec justo. Curabitur massa arcu, rhoncus
-          vitae sodales ac, condimentum in dolor. Sed id purus aliquet, convallis est id, consequat elit.</p>
-        </div>
-        <!--Modal footer -->
-        <div class="modal-footer">
-          <!-- Button to close modal -->
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <!-- Button to list job/submit form -->
-          <button type="submit" class="btn btn-primary">List Job</button>
-        </div>
-      </div>
-    </div>
-  </div>
 {% endblock %}

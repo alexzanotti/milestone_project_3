@@ -4,14 +4,6 @@ from flask import Flask, render_template, request, redirect, url_for
 from recruitment import app, db
 from recruitment.data_models import Listing, Applicant
 
-# if os.path.exists("env.py"):
-#     import env
-
-
-# app = Flask(__name__)
-# app.secret_key = os.environ.get("SECRET_KEY")
-
-
 # Home Page
 @app.route("/")
 def index():
@@ -63,6 +55,18 @@ def recruiter_edit():
 @app.route("/recruiter_list", methods=["GET", "POST"])
 def recruiter_list():
     if request.method == "POST":
+        recruiter = Listing(
+          job_title=request.form.get("job_title"),
+          salary=request.form.get("salary"),
+          location=request.form.get("location"),
+          company=request.form.get("company"),
+          experience_required=request.form.get("experience_required"),
+          job_description=request.form.get("job_description"),
+          requirements=request.form.get("requirements"),
+          benefits=request.form.get("benefits")
+        )
+        db.session.add(recruiter)
+        db.session.commit()
         return redirect("recruiter_listed")
     else:
         return render_template("recruiter_list.html", title="Recruiter List", header="Recruiter List")

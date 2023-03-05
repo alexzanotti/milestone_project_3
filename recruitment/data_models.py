@@ -11,6 +11,7 @@ class Listing(db.Model):
     experience_required = db.Column(db.Text, nullable=False)
     job_description = db.Column(db.Text, nullable=False)
     requirements = db.Column(db.Text, nullable=False)
+    benefits = db.Column(db.Text, nullable=False)
     applicants = db.relationship("Applicant", backref="listing", cascade="all, delete", lazy=True)
 
     def __repr__(self):
