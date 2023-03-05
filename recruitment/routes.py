@@ -3,18 +3,20 @@ import json
 from flask import Flask, render_template, request, redirect, url_for
 from recruitment import app, db
 from recruitment.data_models import Listing, Applicant
-if os.path.exists("env.py"):
-    import env
+
+# if os.path.exists("env.py"):
+#     import env
 
 
-app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY")
+# app = Flask(__name__)
+# app.secret_key = os.environ.get("SECRET_KEY")
+
 
 # Home Page
 @app.route("/")
 def index():
     images = []
-    with open("static/data/images.json", "r") as json_images:
+    with open("recruitment/static/data/images.json", "r") as json_images:
         images = json.load(json_images)
     return render_template("index.html", title="Home", header="Home",  images=images)
 
