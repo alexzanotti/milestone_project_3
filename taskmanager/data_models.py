@@ -1,4 +1,5 @@
-import db
+# import db
+from taskmanager import db
 
 class Listing(db.Model):
     # schema for the Listing model
