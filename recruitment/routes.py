@@ -41,6 +41,12 @@ def contact():
 def contact_sent():
     return render_template("contact_sent.html", title="Contact Sent", header="Contact Sent")
 
+# Recruiter Page
+@app.route("/recruiter")
+def recruiter():
+    recruiter = list(Listing.query.order_by(Listing.id).all())
+    return render_template("recruiter.html", title="Recruiter", header="Recruiter", recruiter=recruiter)
+
 # Recruiter Applicants Page
 @app.route("/recruiter_applicants")
 def recruiter_applicants():
@@ -75,8 +81,3 @@ def recruiter_list():
 @app.route("/recruiter_listed")
 def recruiter_listed():
     return render_template("recruiter_listed.html", title="Recruiter Listed", header="Recruiter Listed")
-
-# Recruiter Page
-@app.route("/recruiter")
-def recruiter():
-    return render_template("recruiter.html", title="Recruiter", header="Recruiter")
