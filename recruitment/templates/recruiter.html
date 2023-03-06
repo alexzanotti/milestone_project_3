@@ -37,10 +37,9 @@
       <h3>Benefits</h3>
       <p>{{ listing.benefits }}</p>
       <!--Buttons for editing & deleting listing -->
+      <a href="{{ url_for('recruiter_applicants', listing_id=listing.id) }}" class="btn btn-primary">View Applicants</a>
       <a href="{{ url_for('recruiter_edit', listing_id=listing.id) }}" class="btn btn-primary">Edit</a>
       <a href="{{ url_for('recruiter_delete', listing_id=listing.id) }}" class="btn btn-primary">Delete</a>
-      <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdit">View Applicants</button>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDelete">Delete</button>-->
     </div>
   </div>
 {% endfor %}

@@ -35,7 +35,7 @@ def applicants_apply(listing_id):
         )
         db.session.add(applicant)
         db.session.commit()
-        return redirect("applicants_applied")
+        return redirect(url_for("applicants_applied"))
     else:
         return render_template("applicants_apply.html", title="Apply", header="Apply", listing=listing)
 
@@ -76,9 +76,11 @@ def recruiter_listed():
     return render_template("recruiter_listed.html", title="Recruiter Listed", header="Recruiter Listed")
 
 # Recruiter Applicants Page
-@app.route("/recruiter_applicants")
-def recruiter_applicants():
-    return render_template("recruiter_applicants.html", title="Recruiter Applicants", header="Recruiter Applicants")
+@app.route("/recruiter_applicants/<int:listing_id>")
+def recruiter_applicants(listing_id):
+    listing = list(Listing.query.order_by(Listing.id).filter_by(id=listing_id).all())
+    applicants = listing[0].applicants
+    return render_template("recruiter_applicants.html", title="Recruiter Applicants", header="Recruiter Applicants", applicants=applicants)
 
 # Recruiter Edit Page
 @app.route("/recruiter_edit/<int:listing_id>", methods=["GET", "POST"])

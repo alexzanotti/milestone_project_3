@@ -10,29 +10,29 @@
 <a href="{{ url_for('recruiter') }}" class="btn btn-primary">Return to Recruiter Page</a>
 
 <!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
+{% for applicant in applicants %}
 <h2>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#recruiter_applicant_collapse" role="button" aria-expanded="false"
-    aria-controls="recruiter_collapse">Alex ｜ 12345678901 ｜ alex@hotmail.com ｜
-    4 - 5 years</a>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#recruiter_applicant_collapse_{{ loop.index }}" role="button" aria-expanded="false"
+    aria-controls="recruiter_applicant_collapse_{{ loop.index }}">{{ applicant.name }} ｜ {{ applicant.phone }} ｜ {{ applicant.email }} ｜ {{ applicant.experience_level }}</a>
 </h2>
 <!--Collapsible body, containing all listing information -->
-<div class="collapse" id="recruiter_applicant_collapse">
+<div class="collapse" id="recruiter_applicant_collapse_{{ loop.index }}">
   <div class="card card-body">    
     <h3>Name</h3>
-    <p>applicant.name</p>
+    <p>{{ applicant.name }}</p>
     <h3>Phone Number</h3>
-    <p>applicant.phone</p>
+    <p>{{ applicant.phone }}</p>
     <h3>Email Address</h3>
-    <p>applicant.email</p>
+    <p>{{ applicant.email }}</p>
     <h3>Experience Level</h3>
-    <p>applicant.experience_level</p>
+    <p>{{ applicant.experience_level }}</p>
     <h3>Personal Statement</h3>
-    <p>applicant.personal_statement</p>
+    <p>{{ applicant.personal_statement }}</p>
     <h3>Education</h3>
-    <p>applicant.education</p>
+    <p>{{ applicant.education }}</p>
     <h3>Work Experience</h3>
-    <p>applicant.work_experience</p>
+    <p>{{applicant.work_experience }}</p>
   </div>
 </div>
-
+{% endfor %}
 {% endblock %}
