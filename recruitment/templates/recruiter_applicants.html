@@ -32,7 +32,11 @@
     <p>{{ applicant.education }}</p>
     <h3>Work Experience</h3>
     <p>{{applicant.work_experience }}</p>
+    <a href="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}" class="btn btn-primary">Edit</a>
+    <a href="{{ url_for('recruiter_applicant_delete', applicant_id=applicant.id) }}" class="btn btn-primary">Delete</a>
   </div>
 </div>
+
+
 {% endfor %}
 {% endblock %}
