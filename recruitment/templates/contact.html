@@ -12,22 +12,37 @@
       emailjs.init("5ozi6ayyg6gPAPxAQ");
    })();
 </script>
+<script type="text/javascript">
+  window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('service_m38yb2j', 'template_ki89pno', this)
+              .then(function() {
+                  console.log('SUCCESS!');
+                  window.location.href = "{{ url_for('contact_sent') }}";
+              }, function(error) {
+                  console.log('FAILED...', error);
+              });
+      });
+  }
+</script>
 {% endblock %}
 <!-- Header block that displays the header of the page -->
 {% block header %}{{ header }}{% endblock %}
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Contact form -->
-<form>
+<form id="contact-form">
     <!-- Name -->
     <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="name" class="form-control" id="name" placeholder="Enter Name" required>
+      <label for="from_name" class="form-label">Name</label>
+      <input type="name" class="form-control" id="from_name" name="from_name" placeholder="Enter Name" required>
     </div>
     <!-- Email address -->
     <div class="mb-3">
-      <label for="email" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter Email Address" required>
+      <label for="from_email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Enter Email Address" required>
     </div>
     <!-- Query type -->
     <div class="mb-3">
@@ -42,10 +57,10 @@
     <!-- Message -->
     <div class="mb-3">
       <label for="message" class="form-label">Enter Message Here</label>
-      <textarea class="form-control" id="message" rows="3" placeholder="Enter Message Here" required></textarea>
+      <textarea class="form-control" id="message" rows="3" placeholder="Enter Message Here" name="message" required></textarea>
     </div>
     <!-- Send button -->
-    <button type="submit" class="btn btn-primary" onclick="sendmail()">Send</button>
+    <input type="submit" value="Send" class="btn btn-primary">
   </form>
 {% endblock %}
 
