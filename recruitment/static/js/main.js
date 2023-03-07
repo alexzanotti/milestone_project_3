@@ -62,27 +62,3 @@ marker.addListener('click', function() {
     mapContent.open(map, this);
 });
 }
-
-//EmailJS function
-function sendmail() {
-    let fullName = document.getElementById("name").value;
-    let userEmail = document.getElementById("email").value;
-    let userQuery = document.getElementById("query").value;
-    let userMessage = document.getElementById("message").value;
-
-        var contactDetails = {
-            from_name: fullName,
-            from_email: userEmail,
-            query: userQuery,
-            message: userMessage,
-        };
-         
-        emailjs.send('service_m38yb2j', 'template_ki89pno', contactDetails)
-            .then(function(response) {
-               console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-               console.log('FAILED...', error);
-            });
-
-        window.location.href = "{{ url_for('contact_sent') }}";
-}
