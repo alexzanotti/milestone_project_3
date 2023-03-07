@@ -88,7 +88,7 @@ def recruiter_applicant_delete(applicant_id):
     applicant = Applicant.query.get_or_404(applicant_id)
     db.session.delete(applicant)
     db.session.commit()
-    return redirect(url_for("recruiter"))
+    return redirect(url_for("recruiter_applicants", listing_id=applicant.listing_id))
 
 # Recruiter Applicant Edit Page
 @app.route("/recruiter_applicant_edit/<int:applicant_id>", methods=["GET", "POST"])
@@ -103,7 +103,7 @@ def recruiter_applicant_edit(applicant_id):
         applicant.education = request.form.get("education"),
         applicant.work_experience = request.form.get("work_experience")
         db.session.commit()
-        return redirect(url_for("recruiter"))
+        return redirect(url_for("recruiter_applicants", listing_id=applicant.listing_id))
     return render_template("recruiter_applicant_edit.html", title="Recruiter Applicant Edit", header="Recruiter Applicant Edit", applicant=applicant)
 
 # Recruiter Edit Page
