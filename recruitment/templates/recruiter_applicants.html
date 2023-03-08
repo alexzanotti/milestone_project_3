@@ -17,12 +17,14 @@
 <!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
 {% for applicant in applicants %}
 <h2 class="listing-h2">
-  <a class="btn btn-secondary" data-bs-toggle="collapse" href="#recruiter_applicant_collapse_{{ loop.index }}" role="button" aria-expanded="false"
-    aria-controls="recruiter_applicant_collapse_{{ loop.index }}">{{ applicant.name }} ｜ {{ applicant.phone }} ｜ {{ applicant.email }} ｜ {{ applicant.experience_level }}</a>
+  <a class="btn btn-secondary" data-bs-toggle="collapse" href="#recruiter_applicant_collapse_{{ loop.index }}"
+    role="button" aria-expanded="false"
+    aria-controls="recruiter_applicant_collapse_{{ loop.index }}">{{ applicant.name }} ｜ {{ applicant.phone }} ｜
+    {{ applicant.email }} ｜ {{ applicant.experience_level }}</a>
 </h2>
 <!--Collapsible body, containing all listing information -->
 <div class="collapse" id="recruiter_applicant_collapse_{{ loop.index }}">
-  <div class="card card-body">    
+  <div class="card card-body">
     <h3>Name</h3>
     <p>{{ applicant.name }}</p>
     <h3>Phone Number</h3>
@@ -38,9 +40,9 @@
     <h3>Work Experience</h3>
     <p>{{applicant.work_experience }}</p>
     <div class="anchor-tags">
-    <a href="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}" class="btn btn-warning">Edit</a>
-    <a href="{{ url_for('recruiter_applicant_delete', applicant_id=applicant.id) }}" class="btn btn-danger">Delete</a>
-  </div>
+      <a href="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}" class="btn btn-warning">Edit</a>
+      <a href="{{ url_for('recruiter_applicant_delete', applicant_id=applicant.id) }}" class="btn btn-danger">Delete</a>
+    </div>
   </div>
 </div>
 
