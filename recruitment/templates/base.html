@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <!-- Head -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,15 +14,22 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
   <!-- emailJS -->
   {% block emailjs %}{% endblock %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Chivo+Mono:wght@100&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald&family=Quantico&display=swap"
+    rel="stylesheet">
+
 </head>
 </head>
 <!-- Body -->
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <!-- Navbar branding -->
-      <a class="navbar-brand" href="{{ url_for('index') }}">Recruitment</a>
+      <a class="navbar-brand" href="{{ url_for('index') }}">Recruitment World &copy;</a>
       <!-- Navbar toggle and collapsible button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,9 +62,9 @@
   <!-- base image below the navbar, containing the header title for each page -->
   <div class="base_image">
     <img src="{{ url_for('static', filename='img/recruitment.jpeg') }}" alt="Header image"">
-    <div class="base_central" id="headerTitle">
-      <h1>{% block header %}{% endblock %}</h1>
-    </div>
+    <div class=" base_central" id="headerTitle">
+    <h1>{% block header %}{% endblock %}</h1>
+  </div>
   </div>
 
   <!-- Block content -->
@@ -70,14 +78,14 @@
         <div class="row mt-3 main-footer">
           <!-- About column, containing the company name and a brief summary-->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">Recruitment</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut auctor metus vitae turpis vulputate laoreet.
-              Morbi elit nunc, lobortis vitae diam sit amet, euismod vulputate libero.</p>
+            <h6 class="text-uppercase fw-bold mb-4">Recruitment World</h6>
+            <p>Recruitment Work: A Look into a Recruiting Company Focused on Recruiting for AI, Cryptocurrencies, Finance,
+              Programming, Project Management, Biotechnology, Data Science, and Cybersecurity Sectors</p>
           </div>
           <!-- Links column for each section of the website -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold mb-4">
-              Useful Links
+              Links
             </h6>
             <!-- Home link -->
             <p>
@@ -98,29 +106,29 @@
           </div>
           <!-- Contact column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <h6 class="text-uppercase fw-bold mb-4">Head Office</h6>
             <!-- Head office Location -->
-            <p><i class="fas fa-home me-3"></i>Head Office, London</p>
+            <p><i class="fas fa-home me-3"></i>London</p>
             <!-- Email address -->
             <p><i class="fas fa-envelope me-3"></i>recruiterwebsite@example.com</p>
             <!-- Contact number -->
-            <p><i class="fas fa-phone me-3"></i> 12345 67890</p>
+            <p><i class="fas fa-phone me-3"></i> +12345 67890</p>
             <!-- Fax number -->
-            <p><i class="fas fa-print me-3"></i> 23456 78901</p>
+            <p><i class="fas fa-print me-3"></i> +23456 78901</p>
           </div>
         </div>
       </div>
     </section>
     <!-- Footer bottom, containing the LTD company and copyright icon -->
-    <div class="text-center p-4 footer-bottom">Recruitment Portal &copy;</div>
+    <div class="text-center p-4 footer-bottom">Recruitment World &copy;</div>
   </footer>
-  
+
   <!-- Link to javascript file -->
   <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
   <!-- Link to bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
   <!-- Link to fontawesome -->
   <script src="https://kit.fontawesome.com/1c7b023354.js" crossorigin="anonymous"></script>
 

@@ -7,26 +7,31 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Full Job Details are provided on the application page -->
-<div class="job-details">
-<h2>Job Details</h2>
-<!-- Job title -->
-  <h3>Job Title</h3>
-  <p>{{ listing.job_title }}</p>
-  <h3>Salary</h3>
-  <p>&#65505;{{ listing.salary }}</p>
-  <h3>Location</h3>
-  <p>{{ listing.location }}</p>
-  <h3>Company Name</h3>
-  <p>{{ listing.company }}</p>
-  <h3>Experience Required</h3>
-  <p>{{ listing.experience_required }}</p>
-  <h3>Job Description</h3>
-  <p>{{ listing.job_description }}</p>
-  <h3>Requirements</h3>
-  <p>{{ listing.requirements }}</p>
-  <h3>Benefits</h3>
-  <p>{{ listing.benefits }}</p>
+<h2 class="listing-h2">
+  <a class="btn btn-secondary" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false"
+    aria-controls="collapse">{{ listing.job_title }} Job Details</a>
+</h2>
+<div class="collapse job-details" id="collapse">
+  <div class="card card-body">
+    <h3>Job Title</h3>
+    <p>{{ listing.job_title }}</p>
+    <h3>Salary</h3>
+    <p>&#65505;{{ listing.salary }}</p>
+    <h3>Location</h3>
+    <p>{{ listing.location }}</p>
+    <h3>Company Name</h3>
+    <p>{{ listing.company }}</p>
+    <h3>Experience Required</h3>
+    <p>{{ listing.experience_required }}</p>
+    <h3>Job Description</h3>
+    <p>{{ listing.job_description }}</p>
+    <h3>Requirements</h3>
+    <p>{{ listing.requirements }}</p>
+    <h3>Benefits</h3>
+    <p>{{ listing.benefits }}</p>
+  </div>
 </div>
+
 
 <!-- The users details are captured in the below form -->
 <div class="your-details">
@@ -53,7 +58,7 @@
   <div class="mb-3">
     <label for="experience_level" class="form-label">Experience Level</label>
     <select class="form-select" id="experience_level" name="experience_level" aria-label="experience_level" required>
-      <option value="" disabled selected>Select your option</option>
+      <option value="" disabled selected>Select your Experience Level</option>
       <option value="Up to 1 Year">Up to 1 Year</option>
       <option value="1 - 2 Years">1 - 2 Years</option>
       <option value="2 - 3 Years">2 - 3 Years</option>
@@ -80,7 +85,7 @@
     <textarea class="form-control" id="work_experience" name="work_experience" placeholder="Enter your Work Experience"
       rows="3" required></textarea>
   </div>
-  <button class="btn btn-primary" type="submit">Apply for Job</button>
+  <button class="btn btn-success" type="submit">Apply</button>
 </form>
 </div>
 

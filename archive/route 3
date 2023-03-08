@@ -10,7 +10,8 @@ def index():
     images = []
     with open("recruitment/static/data/images.json", "r") as json_images:
         images = json.load(json_images)
-    return render_template("index.html", title="Home", header="Recruitment World", images=images)
+    return render_template("index.html", title="Home", header="Home", images=images)
+
 
 # Applicants Page
 @app.route("/applicants")
@@ -22,6 +23,7 @@ def applicants():
         header="Applicants",
         applicants=applicants,
     )
+
 
 # Applicants Apply Page
 @app.route("/applicants_apply/<listing_id>", methods=["GET", "POST"])

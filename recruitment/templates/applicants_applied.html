@@ -7,11 +7,14 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Confirmation to the user that the application has been created -->
+<div class="centered applied">
 <h2>Thanks, we've received your application</h2>
+
 <!-- Link to the home page -->
 <a href="{{ url_for('index') }}" class="btn btn-primary">Return to the Home Page</a>
 <!-- Link to the applicants page -->
-<a href="{{ url_for('applicants') }}" class="btn btn-primary">Applicants Page</a>
+<a href="{{ url_for('applicants') }}" class="btn btn-success">Applicants Page</a>
 <!-- Link to the contact page -->
-<a href="{{ url_for('contact') }}" class="btn btn-primary">Contact Us</a>
+<a href="{{ url_for('contact') }}" class="btn btn-warning">Contact Us</a>
+</div>
 {% endblock %}

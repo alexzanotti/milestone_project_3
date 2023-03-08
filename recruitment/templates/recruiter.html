@@ -8,18 +8,18 @@
 {% block content %}
 <!-- List a job  -->
 <div class="list-job">
-<a href="{{ url_for('recruiter_list') }}" class="btn btn-primary">List a Job</a>
+<a href="{{ url_for('recruiter_list') }}" class="btn btn-success">List a Job</a>
 </div>
 <!-- For loop, displaying each listing created in the database -->
 {% for listing in recruiter %}
   <!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
   <h2 class="listing-h2">
-    <a class="btn btn-primary" data-bs-toggle="collapse" href="#recruiter_collapse_{{ loop.index }}" role="button" aria-expanded="false"
+    <a class="btn btn-secondary" data-bs-toggle="collapse" href="#recruiter_collapse_{{ loop.index }}" role="button" aria-expanded="false"
       aria-controls="recruiter_collapse_{{ loop.index }}">{{ listing.job_title }} ｜ &#65505;{{ listing.salary }} ｜ {{ listing.location }} ｜ {{ listing.company }}</a>
   </h2>
   <!--Collapsible body, containing all listing information -->
   <div class="collapse" id="recruiter_collapse_{{ loop.index }}">
-    <div class="card card-body">
+    <div class="card card-body anchor">
       <h3>Job Title</h3>
       <p>{{ listing.job_title }}</p>
       <h3>Salary</h3>
@@ -37,9 +37,11 @@
       <h3>Benefits</h3>
       <p>{{ listing.benefits }}</p>
       <!--Buttons for editing & deleting listing -->
-      <a href="{{ url_for('recruiter_applicants', listing_id=listing.id) }}" class="btn btn-primary">View Applicants</a>
-      <a href="{{ url_for('recruiter_edit', listing_id=listing.id) }}" class="btn btn-primary">Edit</a>
-      <a href="{{ url_for('recruiter_delete', listing_id=listing.id) }}" class="btn btn-primary">Delete</a>
+      <div class="anchor-tags">
+      <a href="{{ url_for('recruiter_applicants', listing_id=listing.id) }}" class="btn btn-success">View Applicants</a>
+      <a href="{{ url_for('recruiter_edit', listing_id=listing.id) }}" class="btn btn-warning">Edit</a>
+      <a href="{{ url_for('recruiter_delete', listing_id=listing.id) }}" class="btn btn-danger">Delete</a>
+    </div>
     </div>
   </div>
 {% endfor %}

@@ -7,6 +7,11 @@ width: 100%;
 
 /* || Header */
 
+
+.nav-link, .navbar-brand {
+    font-size: 1.5rem;
+}
+
 .base_image {
 position: relative;
 text-align: center;
@@ -32,7 +37,7 @@ width: 100%;
 background-color: rgba(0, 0, 0, 0.05);
 }
 
-.centered, .card-body {
+.footer-centered {
 margin: 20px;
 text-align: center;
 }
@@ -48,8 +53,45 @@ margin: 20px;
 /* || Index Page */
 
 
+.sector {
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    padding: 10px;
+}
+
+.centered {
+    margin: 20px;
+text-align: center;
+
+}
+
+.card-body {
+    margin: 20px;
+    text-align: center;
+    }
+
 
 /* || Typography */
+
+h1,h2,h3,h4,h5,h6,p,a, label {
+    font-family: 'Barlow', sans-serif;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+
+/* || Typography 
+font-family: 'Barlow', sans-serif;
+font-family: 'Chivo Mono', monospace;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quantico', sans-serif;
+*/
+
+
 /* || Base Page */
 /* || Applicants Page */
 
@@ -58,9 +100,15 @@ margin: 20px;
     margin-top: 20px;
 }
 
-.listing-anchor {
-    width: 90%;
+.listing-h2 a {
+    width: 80%;
 }
+
+.anchor {
+    width: 80%;
+    margin: 0 auto;
+}
+
 /* || Applicants Apply Page */
 
 .job-details {
@@ -87,23 +135,59 @@ margin: 20px;
  }
 
 .apply-form {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
  }
 
-.apply-form button {
- padding: 10px 20%;
+/* || Applicants Applied Page */
+
+.applied a {
+    margin: 10px;
 }
 
-/* || Applicants Applied Page */
+/* || Applicants Edit Page */
+
+.your-details input, .your-details textarea {
+    text-align: center;
+} 
+
+
 /* || Recruiter Page */
 
 .list-job {
     text-align: center;
+    margin-top: 20px;
+}
+
+
+.anchor-tags {
+    margin: 10px 0;
 }
 
 /* || Recruiter Edit Page */
+.recruiter-edit {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.recruiter-edit input,.recruiter-edit textarea {
+    text-align: center;
+}
 /* || Recruiter List Page */
+
+.job-listing {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* || Recruiter Listed Page */
 /* || Contact Page */
+
+.contact-style {
+    width: 80%;
+    margin: 0 auto;
+}
+
 /* || Contact Sent Page */

@@ -11,12 +11,12 @@
 {% for listing in applicants %}
   <!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
   <h2 class="listing-h2">
-    <a class="btn btn-primary" data-bs-toggle="collapse" href="#recruiter_collapse_{{ loop.index }}" role="button" aria-expanded="false"
+    <a class="btn btn-secondary" data-bs-toggle="collapse" href="#recruiter_collapse_{{ loop.index }}" role="button" aria-expanded="false"
       aria-controls="recruiter_collapse_{{ loop.index }}">{{ listing.job_title }} ｜ &#65505;{{ listing.salary }} ｜ {{ listing.location }} ｜ {{ listing.company }}</a>
   </h2>
   <!--Collapsible body, containing all listing information -->
   <div class="collapse" id="recruiter_collapse_{{ loop.index }}">
-    <div class="card card-body">
+    <div class="card card-body anchor">
       <h3>Job Title</h3>
       <p>{{ listing.job_title }}</p>
       <h3>Salary</h3>
@@ -34,10 +34,11 @@
       <h3>Benefits</h3>
       <p>{{ listing.benefits }}</p>
       <!--Button for applying to listing -->
-      <a href="{{ url_for('applicants_apply', listing_id=listing.id) }}" class="btn btn-primary">Apply</a>
-      
+      <div class="anchor-tags">
+      <a href="{{ url_for('applicants_apply', listing_id=listing.id) }}" class="btn btn-success">Apply</a>
+    </div>
     </div>
   </div>
-{% endfor %}
+  {% endfor %}
 
 {% endblock %}

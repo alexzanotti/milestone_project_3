@@ -7,12 +7,17 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- For loop, displaying each application for each vacancy within the database -->
-<a href="{{ url_for('recruiter') }}" class="btn btn-primary">Return to Recruiter Page</a>
+
+<div class="list-job">
+  <a href="{{ url_for('recruiter') }}" class="btn btn-success">Return to Recruiter Page</a>
+</div>
+
+
 
 <!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
 {% for applicant in applicants %}
-<h2>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#recruiter_applicant_collapse_{{ loop.index }}" role="button" aria-expanded="false"
+<h2 class="listing-h2">
+  <a class="btn btn-secondary" data-bs-toggle="collapse" href="#recruiter_applicant_collapse_{{ loop.index }}" role="button" aria-expanded="false"
     aria-controls="recruiter_applicant_collapse_{{ loop.index }}">{{ applicant.name }} ｜ {{ applicant.phone }} ｜ {{ applicant.email }} ｜ {{ applicant.experience_level }}</a>
 </h2>
 <!--Collapsible body, containing all listing information -->
@@ -32,8 +37,10 @@
     <p>{{ applicant.education }}</p>
     <h3>Work Experience</h3>
     <p>{{applicant.work_experience }}</p>
-    <a href="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}" class="btn btn-primary">Edit</a>
-    <a href="{{ url_for('recruiter_applicant_delete', applicant_id=applicant.id) }}" class="btn btn-primary">Delete</a>
+    <div class="anchor-tags">
+    <a href="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}" class="btn btn-warning">Edit</a>
+    <a href="{{ url_for('recruiter_applicant_delete', applicant_id=applicant.id) }}" class="btn btn-danger">Delete</a>
+  </div>
   </div>
 </div>
 

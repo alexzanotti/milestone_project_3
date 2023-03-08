@@ -7,6 +7,7 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Form to list  -->
+
 <form method="POST" action="{{ url_for('recruiter_list') }}">
     <!-- Job title -->
     <div class="mb-3">
@@ -62,4 +63,5 @@
       <!-- Button to open modal -->
       <button class="btn btn-primary" type="submit">List Job</button>
   </form>
+
 {% endblock %}

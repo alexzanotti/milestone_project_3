@@ -143,3 +143,11 @@ def contact():
 @app.route("/contact_sent")
 def contact_sent():
     return render_template("contact_sent.html", title="Contact Sent", header="Contact Sent")
+
+
+
+
+        search = request.args.get('search')
+
+    if search:
+        applicants = list(Listing.query.filter(Listing.job_title.like("%"+search+"%")))

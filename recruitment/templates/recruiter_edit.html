@@ -7,6 +7,7 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Form to edit listing -->
+<div class="recruiter-edit">
 <form method="POST" action="{{ url_for('recruiter_edit', listing_id=listing.id) }}">
   <!-- Job title -->
   <div class="mb-3">
@@ -63,4 +64,5 @@
     <!-- Button to open modal -->
     <button class="btn btn-primary" type="submit">Edit Listing</button>
 </form>
+</div>
 {% endblock %}

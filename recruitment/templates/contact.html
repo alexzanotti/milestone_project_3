@@ -33,7 +33,8 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Contact form -->
-<form id="contact-form">
+<div class="contact-style">
+<form id="contact-form" class="centered">
     <!-- Name -->
     <div class="mb-3">
       <label for="from_name" class="form-label">Name</label>
@@ -60,8 +61,11 @@
       <textarea class="form-control" id="message" rows="3" placeholder="Enter Message Here" name="message" required></textarea>
     </div>
     <!-- Send button -->
+    <div class="centered">
     <input type="submit" value="Send" class="btn btn-primary">
+  </div>
   </form>
+</div>
 {% endblock %}
 
 
