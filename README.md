@@ -117,3 +117,30 @@ In order to pass this milestone project, the following requirements must be met:
 ### User Story 11
 * As a Recruiter, I want to delete applications for the vacancy, so that I can remove unsuccessful applicants.
 ![alt text](static/img/user_story_11.jpeg "User Story 11")
+
+
+
+
+# Technologies Used
+
+## Main Technologies Used
+### HTML5
+### CSS3
+### Javascript
+### Python 3 + Flask
+### PostgreSQL
+
+## Frameworks, Libraries & Programs Used
+### Balsamiq
+### Bootstrap
+### codebeautify.org/python-formatter-beautifier
+### EmailJS
+### Font Awesome
+### GitHub
+### GitPod
+### Google Fonts
+### Google Maps API
+### jigsaw.w3.org/css-validator
+### JSHint
+### validator.w3.org
+
