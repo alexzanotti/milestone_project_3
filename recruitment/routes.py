@@ -123,6 +123,7 @@ def recruiter_applicant_delete(applicant_id):
 @app.route("/recruiter_applicant_edit/<int:applicant_id>", methods=["GET", "POST"])
 def recruiter_applicant_edit(applicant_id):
     applicant = Applicant.query.get_or_404(applicant_id)
+    listing = Listing.query.get_or_404(applicant.listing_id)
     if request.method == "POST":
         applicant.name = (request.form.get("name"),)
         applicant.phone = (request.form.get("phone"),)
@@ -140,6 +141,7 @@ def recruiter_applicant_edit(applicant_id):
         title="Recruiter Applicant Edit",
         header="Recruiter Applicant Edit",
         applicant=applicant,
+        listing=listing
     )
 
 
