@@ -7,6 +7,9 @@
 <!-- Content block that contains the main content of the page -->
 {% block content %}
 <!-- Form to edit listing -->
+<div class="centered">
+  <a href="{{ url_for('recruiter') }}" class="btn btn-success">Return to Recruiter Page</a>
+</div>
 <div class="recruiter-edit">
 <form method="POST" action="{{ url_for('recruiter_edit', listing_id=listing.id) }}">
   <!-- Job title -->
