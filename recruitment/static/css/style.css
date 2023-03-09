@@ -176,11 +176,19 @@ font-family: 'Quantico', sans-serif;
 }
 /* || Recruiter List Page */
 
-.job-listing {
+.job-listing{
     width: 80%;
     margin: 0 auto;
     text-align: center;
 }
+
+.job-listing input, .job-listing textarea {
+    text-align: center;
+}
+
+
+
+
 
 /* || Recruiter Listed Page */
 
