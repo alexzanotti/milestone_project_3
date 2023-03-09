@@ -8,7 +8,7 @@
 {% block content %}
 <!-- Form to list  -->
 
-<form method="POST" action="{{ url_for('recruiter_list') }}">
+<form method="POST" action="{{ url_for('recruiter_list') }}" class="job-listing">
     <!-- Job title -->
     <div class="mb-3">
       <label for="job_title" class="form-label">Job Title</label>
@@ -48,20 +48,22 @@
       <label for="job_description" class="form-label">Job Description</label>
       <textarea class="form-control" id="job_description" name="job_description" placeholder="Enter Job Description"
         rows="6" required></textarea>
+      </div>
       <!-- Job Requirements -->
       <div class="mb-3">
         <label for="requirements" class="form-label">Job Requirements</label>
         <textarea class="form-control" id="requirements" name="requirements" placeholder="Enter Job Requirements" rows="6"
           required></textarea>
+        </div>
         <!-- Job Benefits -->
-      </div>
+      
       <div class="mb-3">
         <label for="benefits" class="form-label">Job Benefits</label>
         <textarea class="form-control" id="benefits" name="benefits" placeholder="Enter Job Benefits" rows="6"
           required></textarea>
       </div>
       <!-- Button to open modal -->
-      <button class="btn btn-primary" type="submit">List Job</button>
+      <button class="btn btn-success" type="submit">List Job</button>
   </form>
 
 {% endblock %}

@@ -113,7 +113,7 @@ font-family: 'Quantico', sans-serif;
 
 .job-details {
     text-align: center;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -183,6 +183,19 @@ font-family: 'Quantico', sans-serif;
 }
 
 /* || Recruiter Listed Page */
+
+
+.applicant-details {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.listed a {
+    margin: 10px;
+}
+
+
 /* || Contact Page */
 
 .contact-style {
