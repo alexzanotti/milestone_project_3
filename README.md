@@ -46,3 +46,34 @@ In order to pass this milestone project, the following requirements must be met:
 9. Attribution: Maintain clear separation between code written by you and code from external sources (e.g. libraries or tutorials). Attribute any code from external sources to its source via comments above the code and (for larger dependencies) in the README.
 10. Deployment: Deploy the final version of your code to a hosting platform such as Heroku.
 11. Make sure to not include any passwords or secret keys in the project repository.
+
+# UX
+
+## The ideal users for this website:
+* Job Applicants
+* Job Recruiters
+
+## User Stories
+
+### Job Applicants User Stories
+
+* As a Job Applicant, I want to learn more about the recruitment company, so that I can make an informed decision to proceed with my application.
+* As a Job Applicant, I want to view job listings held within the site, so that I can see what roles I can apply for.
+* As a Job Applicant, I want to apply for a job so that I can gain employment.
+* As a Job Applicant, I want to be able to contact the site administrators, so that they can answer any queries.
+
+
+### Job Recruiters User Stories
+
+* As a Recruiter, I want to list a job vacancy, so that I can fill a position within my company
+* As a Recruiter, I want to be able to edit a vacancy that I've created, so that if I've made a mistake, or the vacancy details have change, I'll be able to make the amendment.
+* As a Recruiter, I want to be able to delete a vacancy, so that in the instances that I'm no longer recruiting for a position, I can remove the vacancy.
+* As a Recruiter, I want to view applicants for the vacancy, so that I can contact applicants that I'm interested in interviewing.
+* As a Recruiter, I want to edit applications for the vacancy, so that I can correct data once I've made contact with the applicant.
+* As a Recruiter, I want to delete applications for the vacancy, so that I can remove unsuccessful applicants.
+
+
+
+
+
+
