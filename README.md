@@ -225,3 +225,83 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 ### JSHint
 ### validator.w3.org
 
+# Features
+
+## Base
+
+### Header
+- Bootstrap is used to construct the header 
+- When hovering over a different list item, the color will change
+
+#### Header Responsiveness
+- For smaller screens, a hamburger navbar icon is used, in which the list items appear in the dropdown
+
+### Header Image
+- An image is used for each page just below the navbar
+- The title for each page is coloured red, held at the center of the image
+
+### Footer
+- Bootstrap is used to contruct the footer
+- The "About" information is held on the left hand side of the page (for larger screens)
+- The "Links" information is held within the center of the footer (for larger screens)
+- The "Head Office Contact" information is held on the right hand side of the page (for larger screens)
+- Fontawesome Icons are used to denote the Head Office Contact information
+- the bottom of the footer contains the Recruitment World copyright
+
+#### Footer Responsiveness
+- For smaller screens, the "About", "Links" and "Head Office Contact" sections are displayed in block.
+
+
+## Home Page
+- The home page contains introductory text, describing the website
+- A Google Maps API is used to display where the offices are located
+- A Sectors section is used to display the sectors that the recruitment company is suited for
+- The Our Pages section is used to inform the user of the applicants and recruiter pages
+## Home Page Responsiveness
+
+## Applicant Page
+- the applicants page holds anchor elements for each job listing
+- the anchor elements contain the following data: Job Title, Salary, Location, Company Name
+- when clicking on a anchor element, a collapsible section appears, containing full data about the job listing
+- within each collapsible, an apply button is presented, allowing the applicant to apply to the listing
+## Applicant Page Responsiveness
+
+## Recruiter Page 
+- a listing button is presented, which takes the recruiter to the recruiter list page
+- the anchor elements contain the following data: Job Title, Salary, Location, Company Name
+- when clicking on a anchor element, a collapsible section appears, containing full data about the job listing
+- within each collapsible, a view applicant button is presented, taking the recruiter to the recruiter applicants page
+- within each collapsible, an edit listing button is presented, taking the recruiter to the recruiter edit page
+- within each collapsible, a delete listing button is presented, allowing the applicant to delete to the listing
+- a modal is presented when clicking the delete button, to allow the recruiter an opportunity to confirm that they want to delete the listing
+## Recruiter Page Responsiveness
+
+## Contact Page
+- The contact page contains a form that the user is able to complete. It asked for their Name, Email, Query Type and Message.
+- At the bottom of the contact form, there is a send button, which sends the email to the administrators and redirects the user to the contact sent page
+
+## Contact Sent Page
+- A confirmation message is displayed to the user
+- a return to homepage button is presented, redirecting the user to the home page
+- a applicants page button is presented, redirecting the user to the applicants page
+- a recruitment page button is presented, redirecting the user to the recruiter page
+## Contact Sent Responsiveness
+
+
+
+
+
+## Applicant Applied Page
+## Applicant Applied Responsiveness 
+## Applicant Apply Page
+## Applicant Apply Responsiveness
+## Recruiter Applicant Page
+## Recruiter Applicant Responsiveness
+## Recruiter Applicant Edit Page
+## Recruiter Applicant Edit Responsiveness
+## Recruiter Edit Page
+## Recruiter Edit Responsiveness
+## Recruiter List Page
+## Recruiter List Responsiveness
+## Recruiter Listed Page
+## Recruiter Listed Responsiveness
