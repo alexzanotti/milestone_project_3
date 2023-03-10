@@ -118,8 +118,89 @@ In order to pass this milestone project, the following requirements must be met:
 * As a Recruiter, I want to delete applications for the vacancy, so that I can remove unsuccessful applicants.
 ![alt text](static/img/user_story_11.jpeg "User Story 11")
 
+## Development Planes
 
+### Strategy Plane
+The strategy from this project incorporates the requirements derived from the user stories. This website will focus on the following target audience, divided into two main categories:
 
+* Job Applicants
+* Job Recruiters
+
+#### Personality
+* Intelligent
+* Technical Minded
+* Early Adopters
+
+#### Demographic
+* Age - 22-40
+* Gender - Male/Female
+* Education - College
+
+### Scope Plane
+In scope for this project are the following requirements:
+
+* Information about the recruitment company
+* Job listings held within the site are visible
+* Applications for a listing is possible
+* Users are able to contact the site administrators
+* Job listings can be created
+* Job listings can be edited
+* Job listings can be deleted
+* Job applicants can be viewed
+* Job applicants can be edited
+* Job applicants can be deleted
+
+### Structure Plane
+The main structure of the website will be as follows:
+* Home Page - this contains information about the recruitment company
+* Applicant Page - this is essentially a jobs board, containing all listings
+* Recruiter Page - this is where listings are held, for recruiters to view applicants/edit/delete
+* Contact Page
+
+#### Listings
+In order to create a listing, there is the following page:
+* Recruiter List
+
+When the listing has been created, the recruiter is taken to the following page:
+* Recruiter Listed
+
+In order to edit a listing, the user is taken to the following page:
+* Recruiter Edit
+
+In order to view applicants to a listing, the user is taken to the following page:
+* Recruiter Applicants
+
+In order to edit applicants to a listing, the user is taken to the following page:
+* Recruiter Applicants Edit
+
+#### Applicants
+In order to apply to a listing, there is the following page:
+* Applicants Apply
+
+When the applicant has applied to the listing, the applicant is taken to the following page:
+* Applicant Applied
+
+#### Contact
+Once the user has submitted the contact form, they're taken to the following page:
+* Contact Sent
+
+### Skeleton Plane
+For the skeleton plane, wireframes were made using [Balsamiq](https://balsamiq.com/). 
+
+### Balsamiq Wireframe Images
+Below are the Wireframes created in Balsamiq for this project:
+* Home Page Wireframe
+![alt text](static/img/home_page_wireframe.jpeg "Home Page Wireframe")
+* Applicant Page Wireframe
+![alt text](static/img/applicant_page_wireframe.jpeg "Applicant Page Wireframe")
+* Quiz Page Wireframe
+![alt text](static/img/recruiter_page_wireframe.jpeg "Recruiter Page Wireframe")
+* Contact Page Wireframe
+![alt text](static/img/contact_page_wireframe.jpeg "Contact Page Wireframe")
+
+### Surface Plane
+
+The Surface Plane of the website is designed to provide a visually engaging and user-friendly experience. The website features a sleek and modern design with a color scheme that emphasizes professionalism and innovation. The website's layout is organized in a way that makes it easy for visitors to navigate and find the information they need
 
 # Technologies Used
 
