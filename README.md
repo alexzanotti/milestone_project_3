@@ -190,13 +190,13 @@ For the skeleton plane, wireframes were made using [Balsamiq](https://balsamiq.c
 ### Balsamiq Wireframe Images
 Below are the Wireframes created in Balsamiq for this project:
 * Home Page Wireframe
-![alt text](static/img/home_page_wireframe.jpeg "Home Page Wireframe")
-* Applicant Page Wireframe
-![alt text](static/img/applicant_page_wireframe.jpeg "Applicant Page Wireframe")
-* Quiz Page Wireframe
-![alt text](static/img/recruiter_page_wireframe.jpeg "Recruiter Page Wireframe")
-* Contact Page Wireframe
-![alt text](static/img/contact_page_wireframe.jpeg "Contact Page Wireframe")
+![alt text](static/img/home_page_wireframe.png "Home Page Wireframe")
+* Applicant Pages Wireframe
+![alt text](static/img/applicant_page_wireframe.png "Applicant Page Wireframe")
+* Recruiter Pages Wireframe
+![alt text](static/img/recruiter_page_wireframe.png "Recruiter Page Wireframe")
+* Contact Pages Wireframe
+![alt text](static/img/contact_page_wireframe.png "Contact Page Wireframe")
 
 ### Surface Plane
 
