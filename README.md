@@ -287,10 +287,6 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 - a recruitment page button is presented, redirecting the user to the recruiter page
 ## Contact Sent Responsiveness
 
-
-
-
-
 ## Applicant Applied Page
 ## Applicant Applied Responsiveness 
 ## Applicant Apply Page
@@ -305,6 +301,70 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 ## Recruiter List Responsiveness
 ## Recruiter Listed Page
 ## Recruiter Listed Responsiveness
+
+# Testing
+
+## Testing Summary
+Testing carried out in this project has been seperated into manual and automated testing. 
+
+### Manual Testing
+Manual testing was seperated into 8 sub-categories:
+* Browser Compatibility
+* Data Management
+* Functionality/Usability/Interactivity
+* Heroku Deployment
+* Lighthouse
+* PEP8 Compliance
+* Responsiveness
+* User Story Validation
+
+### Automated Testing
+
+Automated testing was seperated into 3 sub-categories:
+
+* HTML Validator validator.w3.org
+* CSS Validator jigsaw.w3.org/css-validator/
+* Javascript Validator JSHint
+
+## Testing Procedure
+
+### Manual Testing Procedure
+
+#### Browser testing
+In this test, the application is tested on various web browsers to ensure that it is working properly across different browsers and their versions. Testers check for compatibility issues with different browsers and ensure that the application's functionalities are consistent across different browsers.
+
+#### Data Management
+This test type ensures that the application's data management functions work correctly. Testers verify that the data is being stored, retrieved, and manipulated properly. They also check that the CRUD functionality is working correctly, as it pertains to applicants/applications and listings. 
+
+
+#### Functionality/Usability/Interactvity 
+This test type assesses the application's functionality, usability, and interactivity. Testers check if all features and functionalities are working as intended, if the application is user-friendly, and if user interaction is smooth, as specified in the features section of the README.
+
+#### Heroku Deployment
+This test type focuses on the deployment of the application on the Heroku platform. Testers check if the application is successfully deployed and accessible on the Heroku platform. They also ensure that this matches the development version.
+
+#### Lighthouse
+This test type uses Google's Lighthouse tool to assess the application's performance, accessibility, best practices, and SEO. Testers use the tool to generate a report and check for any issues or recommendations.
+
+#### PEP8 Compliance
+PEP 8 is a set of guidelines and recommendations for writing clean, readable, and maintainable Python code. It covers topics such as naming conventions, code layout, function and class design, and documentation. Adhering to PEP 8 helps improve the consistency and quality of Python code, making it easier to understand, debug, and collaborate on.
+
+#### Responsiveness
+This test type checks the application's responsiveness across different screen sizes and devices. Testers ensure that the application's layout adjusts correctly to different screen sizes and that all features are accessible on different devices, as specified in the features section of the README.
+
+#### User Story Validation
+This test type ensures that the application meets the requirements of the user stories. Testers verify that all user stories are addressed and implemented correctly. They also ensure that the application's functionalities are in line with the user's needs and expectations.
+
+### Automated Testing Procedure
+
+#### HTML Validator
+This automated test type checks the HTML code for errors and warnings. The HTML Validator tool (validator.w3.org) checks for proper markup, syntax errors, and other issues that can cause problems with the rendering of web pages. It provides a detailed report of errors and warnings, allowing developers to fix them quickly.
+
+#### CSS Validator
+This automated test type checks the CSS code for errors and warnings. The CSS Validator tool (jigsaw.w3.org/css-validator/) checks for syntax errors, compliance with CSS standards, and other issues that can cause problems with the appearance and layout of web pages. It provides a detailed report of errors and warnings, allowing developers to fix them quickly.
+
+#### Javascript Validator
+This automated test type checks the JavaScript code for errors and warnings. The JSHint tool (JSHint) checks for syntax errors, potential bugs, and other issues that can cause problems with the functionality of web pages. It provides a detailed report of errors and warnings, allowing developers to fix them quickly.
 
 # Deployment
 
