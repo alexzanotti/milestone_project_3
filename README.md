@@ -306,6 +306,33 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 ## Recruiter Listed Page
 ## Recruiter Listed Responsiveness
 
+# Deployment
+
+This project was developed using the [GitPod](https://www.gitpod.io/ "Link to GitPod site") Integrated Development Environment, which was then committed and pushed to [Github](https://github.com/ "Link to Github site") using the GitPod terminal. The application is deployed on Heroku, as we can't host a Python project on Github pages
+
+## Deploying on GitHub Pages
+To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
+
+1. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
+2. Locate the [GitHub Repository](https://alexzanotti.github.io/milestone_project_3/ "Link to GitHub Repository").
+3. At the top of the repository, select Settings from the menu items.
+4. Scroll down the Settings page to the "Pages" section.
+5. Under "Source" click the drop-down menu labelled "None" and select "Main".
+6. Upon selection, the page will automatically refresh meaning that the website is now deployed.
+7. Scroll back down to the "Pages" section to retrieve the deployed link.
+
+## Deployment on Heroku  
+
+To deploy on Heroku, the following steps were taken:
+
+1. Set Up A New Heroku App
+2. Connect Git Remote
+3. Add A Requirements.txt file   
+4. Add A Procfile file 
+5. Connect App to Github   
+6. Set Up The Environment Variables in Heroku 
+7. Enable The Automatic Deployment
+
 # Credits
 
 ## Media
