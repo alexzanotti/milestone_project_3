@@ -76,43 +76,45 @@ In order to pass this milestone project, the following requirements must be met:
 
 ### User Story 1
 * As a Job Applicant, I want to learn more about the recruitment company, so that I can make an informed decision to proceed with my application.
-![alt text](static/img/user_story_1.jpeg "User Story 1")
+![alt text](recruitment/static/img/user_story_1_1.png "User Story 1 #1")
+![alt text](recruitment/static/img/user_story_1_2.png "User Story 1 #2")
 
 ### User Story 2
 * As a Job Applicant, I want to view job listings held within the site, so that I can see what roles I can apply for.
-![alt text](static/img/user_story_2.jpeg "User Story 2")
+![alt text](recruitment/static/img/user_story_2_1.png "User Story 2 #1")
+![alt text](recruitment/static/img/user_story_2_2.png "User Story 2 #2")
 
 ### User Story 3
 * As a Job Applicant, I want to apply for a job so that I can gain employment.
-![alt text](static/img/user_story_3.jpeg "User Story 3")
+![alt text](recruitment/static/img/user_story_3.png "User Story 3")
 
 ### User Story 4
 * As a Job Applicant, I want to be able to contact the site administrators, so that they can answer any queries.
-![alt text](static/img/user_story_4.jpeg "User Story 4")
+![alt text](recruitment/static/img/user_story_4.png "User Story 4")
 
 ### User Story 5
 * As a Recruiter, I want to list a job vacancy, so that I can fill a position within my company
-![alt text](static/img/user_story_5.jpeg "User Story 5")
+![alt text](recruitment/static/img/user_story_5.png "User Story 5")
 
 ### User Story 6
 * As a Recruiter, I want to be able to edit a vacancy that I've created, so that if I've made a mistake, or the vacancy details have change, I'll be able to make the amendment.
-![alt text](static/img/user_story_6.jpeg "User Story 6")
+![alt text](recruitment/static/img/user_story_6.png "User Story 6")
 
 ### User Story 7
 * As a Recruiter, I want to be able to delete a vacancy, so that in the instances that I'm no longer recruiting for a position, I can remove the vacancy.
-![alt text](static/img/user_story_8.jpeg "User Story 8")
+![alt text](recruitment/static/img/user_story_7.png "User Story 7")
 
 ### User Story 8
 * As a Recruiter, I want to view applicants for the vacancy, so that I can contact applicants that I'm interested in interviewing.
-![alt text](static/img/user_story_9.jpeg "User Story 9")
+![alt text](recruitment/static/img/user_story_8.png "User Story 8")
 
 ### User Story 9
 * As a Recruiter, I want to edit applications for the vacancy, so that I can correct data once I've made contact with the applicant.
-![alt text](static/img/user_story_10.jpeg "User Story 10")
+![alt text](recruitment/static/img/user_story_9.png "User Story 9")
 
 ### User Story 10
 * As a Recruiter, I want to delete applications for the vacancy, so that I can remove unsuccessful applicants.
-![alt text](static/img/user_story_11.jpeg "User Story 11")
+![alt text](recruitment/static/img/user_story_10.png "User Story 10")
 
 ## Development Planes
 
