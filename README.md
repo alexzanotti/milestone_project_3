@@ -305,3 +305,30 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 ## Recruiter List Responsiveness
 ## Recruiter Listed Page
 ## Recruiter Listed Responsiveness
+
+# Credits
+
+## Media
+All images were sourced Google Images
+
+## Code
+The developer consulted multiple sites in order to better understand the code they were trying to implement. 
+
+The following sites were used:
+* Code Institute
+* Bootstrap
+* EmailJS
+* Flask
+* Font Awesome
+* Google Maps API
+* https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+* Jinja
+* Postgresql
+* Stack Overflow
+* Youtube
+* W3Schools
+
+# Acknowledgements
+I would like to thank the Code Institute for providing the course content and guidance that has allowed me to build this website.
+I would like to thank my mentor, Seun, for their invaluable help and guidance throughout the project.
+I would like to thank all parties within the credits section
