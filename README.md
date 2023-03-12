@@ -12,7 +12,7 @@ The target audience for recruiters who want to list vacancies they're trying to 
 
 This website was made for the third of four milestone projects required to complete the diploma in software development program at The Code Institute.
 
-[Click Here to View the Website!](https://alexzanotti.github.io/milestone_project_3/)
+[Click Here to View the Website!](milestone-project-3.herokuapp.com/)
 
 # Value provided:
 
