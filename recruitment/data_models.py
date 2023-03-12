@@ -33,7 +33,8 @@ class Applicant(db.Model):
     education = db.Column(db.Text, nullable=False)
     work_experience = db.Column(db.Text, nullable=False)
     listing_id = db.Column(
-        db.Integer, db.ForeignKey("listing.id", ondelete="CASCADE"), nullable=False
+        db.Integer, db.ForeignKey("listing.id", ondelete="CASCADE"),
+        nullable=False
     )
 
     def __repr__(self):
