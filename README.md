@@ -269,6 +269,26 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 ## Applicant Page Responsiveness
 - The width of each job listing increases as the screen size decreases
 
+## Applicant Apply Page
+- An anchor element is present, for the job listing
+- the anchor element contains the Job Title heading
+- when clicking on a anchor element, a collapsible section appears, containing full data about the job listing
+- there is a your details form, which collects data from the applicant
+- there is an apply button, which submits the data and redirects the user to the applicant applied page
+
+## Applicant Apply Responsiveness
+- the job title anchor element increases in width as the screen size decreases
+- the Your Details form increases in width as the screen size decreases
+
+## Applicant Applied Page
+- A confirmation message is displayed to the user
+- a return to homepage button is presented, redirecting the user to the home page
+- a applicants page button is presented, redirecting the user to the applicants page
+- a contact page button is presented, redirecting the user to the contact page
+
+## Applicant Applied Responsiveness 
+- The buttons are block displayed for small screens
+
 ## Recruiter Page 
 - a listing button is presented, which takes the recruiter to the recruiter list page
 - the anchor elements contain the following data: Job Title, Salary, Location, Company Name
@@ -281,39 +301,28 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 ## Recruiter Page Responsiveness
 - The width of each job listing increases as the screen size decreases
 
-## Contact Page
-- The contact page contains a form that the user is able to complete. It asked for their Name, Email, Query Type and Message.
-- At the bottom of the contact form, there is a send button, which sends the email to the administrators and redirects the user to the contact sent page
+## Recruiter List Page
+- a listing form is presented, which allows the recruiter to enter data for the job listing
 
-## Contact Sent Page
+## Recruiter List Responsiveness
+- The width of the listing Details form increases as the screen size decreases
+
+## Recruiter Listed Page
 - A confirmation message is displayed to the user
 - a return to homepage button is presented, redirecting the user to the home page
-- a applicants page button is presented, redirecting the user to the applicants page
 - a recruitment page button is presented, redirecting the user to the recruiter page
-
-## Contact Sent Responsiveness
-- The buttons are block displayed for small screens
-
-## Applicant Applied Page
-- A confirmation message is displayed to the user
-- a return to homepage button is presented, redirecting the user to the home page
-- a applicants page button is presented, redirecting the user to the applicants page
 - a contact page button is presented, redirecting the user to the contact page
 
-## Applicant Applied Responsiveness 
+## Recruiter Listed Responsiveness
 - The buttons are block displayed for small screens
 
+## Recruiter Edit Page
+- a return to recruiter page button is presented, which takes the recruiter to the recruiter page
+- a form is presented, which is pre-populated with the listing details 
+- an edit listing button is at the bottom of the form, which will update an data and return the user to the Recruiter page
 
-## Applicant Apply Page
-- An anchor element is present, for the job listing
-- the anchor element contains the Job Title heading
-- when clicking on a anchor element, a collapsible section appears, containing full data about the job listing
-- there is a your details form, which collects data from the applicant
-- there is an apply button, which submits the data and redirects the user to the applicant applied page
-
-## Applicant Apply Responsiveness
-- the job title anchor element increases in width as the screen size decreases
-- the Your Details form increases in width as the screen size decreases
+## Recruiter Edit Responsiveness
+- The width of the listing Details form increases as the screen size decreases
 
 ## Recruiter Applicant Page
 - a return to recruiter button is presented, which takes the recruiter to the recruiter page
@@ -334,27 +343,17 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 ## Recruiter Applicant Edit Responsiveness
 - The width of the Applicant Details form increases as the screen size decreases
 
-## Recruiter Edit Page
-- a return to recruiter page button is presented, which takes the recruiter to the recruiter page
-- a form is presented, which is pre-populated with the listing details 
-- an edit listing button is at the bottom of the form, which will update an data and return the user to the Recruiter page
+## Contact Page
+- The contact page contains a form that the user is able to complete. It asked for their Name, Email, Query Type and Message.
+- At the bottom of the contact form, there is a send button, which sends the email to the administrators and redirects the user to the contact sent page
 
-## Recruiter Edit Responsiveness
-- The width of the listing Details form increases as the screen size decreases
-
-## Recruiter List Page
-- a listing form is presented, which allows the recruiter to enter data for the job listing
-
-## Recruiter List Responsiveness
-- The width of the listing Details form increases as the screen size decreases
-
-## Recruiter Listed Page
+## Contact Sent Page
 - A confirmation message is displayed to the user
 - a return to homepage button is presented, redirecting the user to the home page
+- a applicants page button is presented, redirecting the user to the applicants page
 - a recruitment page button is presented, redirecting the user to the recruiter page
-- a contact page button is presented, redirecting the user to the contact page
 
-## Recruiter Listed Responsiveness
+## Contact Sent Responsiveness
 - The buttons are block displayed for small screens
 
 
