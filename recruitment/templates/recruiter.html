@@ -6,7 +6,7 @@
 {% block header %}{{ header }}{% endblock %}
 <!-- Content block that contains the main content of the page -->
 {% block content %}
-<!-- List a job  -->
+<!-- List a job button  -->
 <div class="list-job">
   <a href="{{ url_for('recruiter_list') }}" class="btn btn-success">List a Job</a>
 </div>
@@ -21,45 +21,60 @@
 <!--Collapsible body, containing all listing information -->
 <div class="collapse" id="recruiter_collapse_{{ loop.index }}">
   <div class="card card-body anchor">
+    <!-- Job Title  -->
     <h3>Job Title</h3>
     <p>{{ listing.job_title }}</p>
+    <!-- Salary  -->
     <h3>Salary</h3>
     <p>&#65505;{{ listing.salary }}</p>
+    <!-- Location  -->
     <h3>Location</h3>
     <p>{{ listing.location }}</p>
+    <!-- Company Name  -->
     <h3>Company Name</h3>
     <p>{{ listing.company }}</p>
+    <!-- Experience Required  -->
     <h3>Experience Required</h3>
     <p>{{ listing.experience_required }}</p>
+    <!-- Job Description  -->
     <h3>Job Description</h3>
     <p>{{ listing.job_description }}</p>
+    <!-- Requirements  -->
     <h3>Requirements</h3>
     <p>{{ listing.requirements }}</p>
+    <!-- Benefits  -->
     <h3>Benefits</h3>
     <p>{{ listing.benefits }}</p>
-    <!--Buttons for editing & deleting listing -->
     <div class="anchor-tags">
+      <!--Buttons for viewing applicants -->
       <a href="{{ url_for('recruiter_applicants', listing_id=listing.id) }}" class="btn btn-success">View Applicants</a>
+      <!--Buttons for editing the listing -->
       <a href="{{ url_for('recruiter_edit', listing_id=listing.id) }}" class="btn btn-warning">Edit Listing</a>
+      <!--Buttons for deleting the listing - this opens the modal below -->
       <a type="button" class="btn btn-danger" data-bs-toggle="modal"
         data-bs-target="#deleteListing{{ loop.index }}">Delete Listing</a>
     </div>
   </div>
-  <!-- Modal -->
 </div>
+<!-- Modal for confirmation before deleting listing -->
 <div class="modal fade" id="deleteListing{{ loop.index }}" tabindex="-1" aria-labelledby="DeleteModalLabel"
   aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+      <!-- Modal Header -->
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="DeleteModalLabel">Delete Listing</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <!-- Modal Body -->
       <div class="modal-body">
         Are you sure you wish to delete this listing?
       </div>
+      <!-- Modal Footer -->
       <div class="modal-footer">
+        <!-- Close Button -->
         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+        <!-- Delete Button -->
         <a href="{{ url_for('recruiter_delete', listing_id=listing.id) }}" class="btn btn-danger">Delete</a>
       </div>
     </div>

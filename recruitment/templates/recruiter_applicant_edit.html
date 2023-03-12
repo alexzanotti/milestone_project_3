@@ -6,11 +6,12 @@
 {% block header %}{{ header }}{% endblock %}
 <!-- Content block that contains the main content of the page -->
 {% block content %}
-<!-- The users details are captured in the below form -->
+<!-- return to applications button -->
 <div class="centered">
   <a href="{{ url_for('recruiter_applicants', listing_id=listing.id) }}" class="btn btn-success">Return to
     Applications</a>
 </div>
+<!-- The users details are captured in the below form -->
 <div class="your-details">
   <h2>Applicant Details</h2>
   <form class="apply-form" method="POST" action="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}">
@@ -61,6 +62,7 @@
       <textarea class="form-control" id="work_experience" name="work_experience" value="{{ applicant.work_experience }}"
         rows="3" required>{{ applicant.work_experience }}</textarea>
     </div>
+    <!-- edit application button -->
     <button class="btn btn-warning" type="submit">Edit Application</button>
   </form>
 </div>

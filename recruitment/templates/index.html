@@ -8,10 +8,11 @@
 {% block content %}
 <!-- About section -->
 <section class="centered paragraphs">
+  <!-- About section header -->
   <h1>About</h1>
-  <p>Recruitment Work: A Look into a Recruiting Company Focused on Recruiting for AI, Cryptocurrencies, Finance,
+  <!-- About section paragraphs -->
+  <p>A Look into a Recruiting Company Focused on Recruiting for AI, Cryptocurrencies, Finance,
     Programming, Project Management, Biotechnology, Data Science, and Cybersecurity Sectors</p>
-
   <p>Recruitment is an essential function in any organization as it enables companies to attract and hire the best
     talent
     to achieve their goals. In today's rapidly changing business landscape, organizations must keep up with the latest
@@ -20,7 +21,6 @@
     are among the most dynamic and fast-paced, with constantly evolving technologies and methodologies. Hence, it is
     essential for companies operating in these sectors to work with recruitment companies that specialize in these
     fields.</p>
-
   <p>As a recruiting company, our primary goal is to connect companies with the best talent for their needs. We
     specialize in the AI, Cryptocurrencies, Finance, Programming, Project Management, Biotechnology, Data Science, and
     Cybersecurity sectors, providing our clients with a broad range of services, including executive search, contract
@@ -30,7 +30,9 @@
 </section>
 <!--Google maps section-->
 <section class="centered">
+  <!--Google maps section header-->
   <h2>Our Locations</h2>
+  <!--Google maps section paragraph-->
   <p>We're located across 5 offices across the globe - you can find our offices in the following locations:</p>
   <!--Google maps div with a the "map" id-->
   <div id="map"></div>
@@ -38,6 +40,7 @@
 
 <!-- Our sectors section -->
 <section class="centered">
+  <!-- Our sectors section headers-->
   <h2>Our Sectors</h2>
   <h3>We specialise in providing recruitment solutions for the following sectors:</h3>
 </section>
@@ -71,12 +74,15 @@
   <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
+        <!-- Applicants page card header-->
         <h5 class="card-title">Applicants Page</h5>
+        <!-- Applicants page card paragraph-->
         <p class="card-text">The applications page is a one-stop-shop for job seekers looking for opportunities,
           designed to help job seekers quickly and easily find relevant job listings based on
           their experience and qualifications. The page is regularly updated with the latest job listings and is a
           valuable resource for job seekers looking to break into or
           advance their careers</p>
+          <!-- button to applicants page-->
         <a href="{{ url_for('applicants') }}" class="btn btn-success">Applicants Page</a>
       </div>
     </div>
@@ -85,12 +91,15 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
+        <!-- Applicants page card header-->
         <h5 class="card-title">Recruiters Page</h5>
+        <!-- Applicants page card paragraph-->
         <p class="card-text">The recruitment page is a platform designed for recruiters to post job listings and connect
           with top talent. Recruiters can post job listings and once listed, view applicants who have applied for the
           role.
           It offers a broad pool of talent, making it easy for recruiters to find and connect with the right candidates
           for their organizations</p>
+          <!-- button to recruiter page-->
         <a href="{{ url_for('recruiter') }}" class="btn btn-warning">Recruiters Page</a>
       </div>
     </div>

@@ -6,16 +6,13 @@
 {% block header %}{{ header }}{% endblock %}
 <!-- Content block that contains the main content of the page -->
 {% block content %}
-<!-- For loop, displaying each application for each vacancy within the database -->
-
+<!-- Return to Recruiter Page button -->
 <div class="list-job">
   <a href="{{ url_for('recruiter') }}" class="btn btn-success">Return to Recruiter Page</a>
 </div>
-
-
-
-<!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
+<!-- For loop, displaying each application for each vacancy within the database -->
 {% for applicant in applicants %}
+<!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
 <h2 class="listing-h2">
   <a class="btn btn-secondary" data-bs-toggle="collapse" href="#recruiter_applicant_collapse_{{ loop.index }}"
     role="button" aria-expanded="false"
@@ -25,41 +22,56 @@
 <!--Collapsible body, containing all listing information -->
 <div class="collapse" id="recruiter_applicant_collapse_{{ loop.index }}">
   <div class="card card-body applicant-details">
+    <!-- Name -->
     <h3>Name</h3>
     <p>{{ applicant.name }}</p>
+    <!-- Phone Number -->
     <h3>Phone Number</h3>
     <p>{{ applicant.phone }}</p>
+    <!-- Email Address -->
     <h3>Email Address</h3>
     <p>{{ applicant.email }}</p>
+    <!-- Experience Level -->
     <h3>Experience Level</h3>
     <p>{{ applicant.experience_level }}</p>
+    <!-- Personal Statement -->
     <h3>Personal Statement</h3>
     <p>{{ applicant.personal_statement }}</p>
+    <!-- Education -->
     <h3>Education</h3>
     <p>{{ applicant.education }}</p>
+    <!-- Work Experience -->
     <h3>Work Experience</h3>
     <p>{{applicant.work_experience }}</p>
     <div class="anchor-tags">
+      <!-- Button for editing application -->
       <a href="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}" class="btn btn-warning">Edit
         Application</a>
+      <!-- Button for deleting application - this brings up the modal below -->
       <a type="button" class="btn btn-danger" data-bs-toggle="modal"
         data-bs-target="#deleteApplicant{{ loop.index }}">Delete Application</a>
     </div>
   </div>
 </div>
+<!-- modal for confirmation of deleting application -->
 <div class="modal fade" id="deleteApplicant{{ loop.index }}" tabindex="-1" aria-labelledby="DeleteModalLabel"
   aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+      <!-- Modal Header -->
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="DeleteModalLabel">Delete Listing</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <!-- Modal Body -->
       <div class="modal-body">
         Are you sure you wish to delete this Applicant?
       </div>
+      <!-- Modal Footer -->
       <div class="modal-footer">
+        <!-- Close Modal Button -->
         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+        <!-- Delete Application Button -->
         <a href="{{ url_for('recruiter_applicant_delete', applicant_id=applicant.id) }}"
           class="btn btn-danger">Delete</a>
       </div>

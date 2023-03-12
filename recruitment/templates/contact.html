@@ -4,24 +4,26 @@
 {% block title %}{{ title }}{% endblock %}
 <!-- emailjs block -->
 {% block emailjs %}
+<!-- emailjs script -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
+<!-- emailjs init function -->
 <script type="text/javascript">
   (function () {
     emailjs.init("5ozi6ayyg6gPAPxAQ");
   })();
 </script>
+<!-- emailjs function to send form and redirect to contact_sent -->
 <script type="text/javascript">
   window.onload = function () {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
       event.preventDefault();
-      // these IDs from the previous steps
       emailjs.sendForm('service_m38yb2j', 'template_ki89pno', this)
         .then(function () {
-          console.log('SUCCESS!');
+          console.log('SUCCESSFULLY SENT!');
           window.location.href = "{{ url_for('contact_sent') }}";
         }, function (error) {
-          console.log('FAILED...', error);
+          console.log('FAILED TO SEND!', error);
         });
     });
   }

@@ -6,8 +6,7 @@
 {% block header %}{{ header }}{% endblock %}
 <!-- Content block that contains the main content of the page -->
 {% block content %}
-<!-- Form to list  -->
-
+<!-- Form to create job listing  -->
 <form method="POST" action="{{ url_for('recruiter_list') }}" class="job-listing">
   <!-- Job title -->
   <div class="mb-3">
@@ -56,13 +55,12 @@
       required></textarea>
   </div>
   <!-- Job Benefits -->
-
   <div class="mb-3">
     <label for="benefits" class="form-label">Job Benefits</label>
     <textarea class="form-control" id="benefits" name="benefits" placeholder="Enter Job Benefits" rows="6"
       required></textarea>
   </div>
-  <!-- Button to open modal -->
+  <!-- Button to list job -->
   <button class="btn btn-success" type="submit">List Job</button>
 </form>
 
