@@ -35,58 +35,57 @@
 
 <!-- The users details are captured in the below form -->
 <div class="your-details">
-<h2>Your Details</h2>
-<form class="apply-form" method="POST" action="{{ url_for('applicants_apply', listing_id=listing.id) }}">
-  <!-- Applicants name -->
-  <div class="mb-3">
-    <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
-  </div>
-  <!-- Applicants phone number -->
-  <div class="mb-3">
-    <label for="phone" class="form-label">Phone Number</label>
-    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number"
-      pattern="[0-9]{11}" required>
-  </div>
-  <!-- Applicants email address -->
-  <div class="mb-3">
-    <label for="email" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email Address"
-      required>
-  </div>
-  <!-- Applicants experience level -->
-  <div class="mb-3">
-    <label for="experience_level" class="form-label">Experience Level</label>
-    <select class="form-select" id="experience_level" name="experience_level" aria-label="experience_level" required>
-      <option value="" disabled selected>Select your Experience Level</option>
-      <option value="Up to 1 Year">Up to 1 Year</option>
-      <option value="1 - 2 Years">1 - 2 Years</option>
-      <option value="2 - 3 Years">2 - 3 Years</option>
-      <option value="3 - 4 Years">3 - 4 Years</option>
-      <option value="4 - 5 Years">4 - 5 Years</option>
-      <option value="Over 5 Years">Over 5 Years</option>
-    </select>
-  </div>
-  <!-- Applicants personal statement -->
-  <div class="mb-3">
-    <label for="personal_statement" class="form-label">Personal Statement</label>
-    <textarea class="form-control" id="personal_statement" name="personal_statement"
-      placeholder="Enter Personal Statement" rows="3" required></textarea>
-  </div>
-  <!-- Applicants education -->
-  <div class="mb-3">
-    <label for="education" class="form-label">Education</label>
-    <textarea class="form-control" id="education" name="education" placeholder="Enter your Education" rows="3"
-      required></textarea>
-  </div>
-  <!-- Applicants work experience -->
-  <div class="mb-3">
-    <label for="work_experience" class="form-label">Work Experience</label>
-    <textarea class="form-control" id="work_experience" name="work_experience" placeholder="Enter your Work Experience"
-      rows="3" required></textarea>
-  </div>
-  <button class="btn btn-success" type="submit">Apply</button>
-</form>
+  <h2>Your Details</h2>
+  <form class="apply-form" method="POST" action="{{ url_for('applicants_apply', listing_id=listing.id) }}">
+    <!-- Applicants name -->
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
+    </div>
+    <!-- Applicants phone number -->
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number"
+        pattern="[0-9]{11}" required>
+    </div>
+    <!-- Applicants email address -->
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email Address" required>
+    </div>
+    <!-- Applicants experience level -->
+    <div class="mb-3">
+      <label for="experience_level" class="form-label">Experience Level</label>
+      <select class="form-select" id="experience_level" name="experience_level" aria-label="experience_level" required>
+        <option value="" disabled selected>Select your Experience Level</option>
+        <option value="Up to 1 Year">Up to 1 Year</option>
+        <option value="1 - 2 Years">1 - 2 Years</option>
+        <option value="2 - 3 Years">2 - 3 Years</option>
+        <option value="3 - 4 Years">3 - 4 Years</option>
+        <option value="4 - 5 Years">4 - 5 Years</option>
+        <option value="Over 5 Years">Over 5 Years</option>
+      </select>
+    </div>
+    <!-- Applicants personal statement -->
+    <div class="mb-3">
+      <label for="personal_statement" class="form-label">Personal Statement</label>
+      <textarea class="form-control" id="personal_statement" name="personal_statement"
+        placeholder="Enter Personal Statement" rows="3" required></textarea>
+    </div>
+    <!-- Applicants education -->
+    <div class="mb-3">
+      <label for="education" class="form-label">Education</label>
+      <textarea class="form-control" id="education" name="education" placeholder="Enter your Education" rows="3"
+        required></textarea>
+    </div>
+    <!-- Applicants work experience -->
+    <div class="mb-3">
+      <label for="work_experience" class="form-label">Work Experience</label>
+      <textarea class="form-control" id="work_experience" name="work_experience"
+        placeholder="Enter your Work Experience" rows="3" required></textarea>
+    </div>
+    <button class="btn btn-success" type="submit">Apply</button>
+  </form>
 </div>
 
 {% endblock %}

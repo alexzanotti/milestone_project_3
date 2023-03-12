@@ -40,12 +40,15 @@
     <h3>Work Experience</h3>
     <p>{{applicant.work_experience }}</p>
     <div class="anchor-tags">
-      <a href="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}" class="btn btn-warning">Edit Application</a>
-      <a type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteApplicant{{ loop.index }}">Delete Application</a>
+      <a href="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}" class="btn btn-warning">Edit
+        Application</a>
+      <a type="button" class="btn btn-danger" data-bs-toggle="modal"
+        data-bs-target="#deleteApplicant{{ loop.index }}">Delete Application</a>
     </div>
   </div>
 </div>
-<div class="modal fade" id="deleteApplicant{{ loop.index }}" tabindex="-1" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteApplicant{{ loop.index }}" tabindex="-1" aria-labelledby="DeleteModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -57,7 +60,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
-        <a href="{{ url_for('recruiter_applicant_delete', applicant_id=applicant.id) }}" class="btn btn-danger">Delete</a>
+        <a href="{{ url_for('recruiter_applicant_delete', applicant_id=applicant.id) }}"
+          class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>

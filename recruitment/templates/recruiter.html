@@ -41,12 +41,14 @@
     <div class="anchor-tags">
       <a href="{{ url_for('recruiter_applicants', listing_id=listing.id) }}" class="btn btn-success">View Applicants</a>
       <a href="{{ url_for('recruiter_edit', listing_id=listing.id) }}" class="btn btn-warning">Edit Listing</a>
-      <a type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteListing{{ loop.index }}">Delete Listing</a>
+      <a type="button" class="btn btn-danger" data-bs-toggle="modal"
+        data-bs-target="#deleteListing{{ loop.index }}">Delete Listing</a>
     </div>
   </div>
   <!-- Modal -->
 </div>
-<div class="modal fade" id="deleteListing{{ loop.index }}" tabindex="-1" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteListing{{ loop.index }}" tabindex="-1" aria-labelledby="DeleteModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

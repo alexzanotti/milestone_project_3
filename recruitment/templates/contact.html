@@ -4,27 +4,26 @@
 {% block title %}{{ title }}{% endblock %}
 <!-- emailjs block -->
 {% block emailjs %}
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
 <script type="text/javascript">
-   (function(){
-      emailjs.init("5ozi6ayyg6gPAPxAQ");
-   })();
+  (function () {
+    emailjs.init("5ozi6ayyg6gPAPxAQ");
+  })();
 </script>
 <script type="text/javascript">
-  window.onload = function() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          // these IDs from the previous steps
-          emailjs.sendForm('service_m38yb2j', 'template_ki89pno', this)
-              .then(function() {
-                  console.log('SUCCESS!');
-                  window.location.href = "{{ url_for('contact_sent') }}";
-              }, function(error) {
-                  console.log('FAILED...', error);
-              });
-      });
+  window.onload = function () {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      // these IDs from the previous steps
+      emailjs.sendForm('service_m38yb2j', 'template_ki89pno', this)
+        .then(function () {
+          console.log('SUCCESS!');
+          window.location.href = "{{ url_for('contact_sent') }}";
+        }, function (error) {
+          console.log('FAILED...', error);
+        });
+    });
   }
 </script>
 {% endblock %}
@@ -34,7 +33,7 @@
 {% block content %}
 <!-- Contact form -->
 <div class="contact-style">
-<form id="contact-form" class="centered">
+  <form id="contact-form" class="centered">
     <!-- Name -->
     <div class="mb-3">
       <label for="from_name" class="form-label">Name</label>
@@ -43,7 +42,8 @@
     <!-- Email address -->
     <div class="mb-3">
       <label for="from_email" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Enter Email Address" required>
+      <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Enter Email Address"
+        required>
     </div>
     <!-- Query type -->
     <div class="mb-3">
@@ -58,14 +58,13 @@
     <!-- Message -->
     <div class="mb-3">
       <label for="message" class="form-label">Enter Message Here</label>
-      <textarea class="form-control" id="message" rows="3" placeholder="Enter Message Here" name="message" required></textarea>
+      <textarea class="form-control" id="message" rows="3" placeholder="Enter Message Here" name="message"
+        required></textarea>
     </div>
     <!-- Send button -->
     <div class="centered">
-    <input type="submit" value="Send" class="btn btn-primary" id="contact-send">
-  </div>
+      <input type="submit" value="Send" class="btn btn-primary" id="contact-send">
+    </div>
   </form>
 </div>
 {% endblock %}
-
-

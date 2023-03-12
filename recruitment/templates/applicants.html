@@ -9,36 +9,37 @@
 <h2 class="centered">See below for our latest job offerings:</h2>
 <!-- For loop, displaying each listing created in the database -->
 {% for listing in applicants %}
-  <!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
-  <h2 class="listing-h2">
-    <a class="btn btn-secondary" data-bs-toggle="collapse" href="#recruiter_collapse_{{ loop.index }}" role="button" aria-expanded="false"
-      aria-controls="recruiter_collapse_{{ loop.index }}">{{ listing.job_title }} ｜ &#65505;{{ listing.salary }} ｜ {{ listing.location }} ｜ {{ listing.company }}</a>
-  </h2>
-  <!--Collapsible body, containing all listing information -->
-  <div class="collapse" id="recruiter_collapse_{{ loop.index }}">
-    <div class="card card-body anchor">
-      <h3>Job Title</h3>
-      <p>{{ listing.job_title }}</p>
-      <h3>Salary</h3>
-      <p>&#65505;{{ listing.salary }}</p>
-      <h3>Location</h3>
-      <p>{{ listing.location }}</p>
-      <h3>Company Name</h3>
-      <p>{{ listing.company }}</p>
-      <h3>Experience Required</h3>
-      <p>{{ listing.experience_required }}</p>
-      <h3>Job Description</h3>
-      <p>{{ listing.job_description }}</p>
-      <h3>Requirements</h3>
-      <p>{{ listing.requirements }}</p>
-      <h3>Benefits</h3>
-      <p>{{ listing.benefits }}</p>
-      <!--Button for applying to listing -->
-      <div class="anchor-tags">
+<!--Collapsible heading for each listing, containing the following information: job title, salary, location and company name -->
+<h2 class="listing-h2">
+  <a class="btn btn-secondary" data-bs-toggle="collapse" href="#recruiter_collapse_{{ loop.index }}" role="button"
+    aria-expanded="false" aria-controls="recruiter_collapse_{{ loop.index }}">{{ listing.job_title }} ｜
+    &#65505;{{ listing.salary }} ｜ {{ listing.location }} ｜ {{ listing.company }}</a>
+</h2>
+<!--Collapsible body, containing all listing information -->
+<div class="collapse" id="recruiter_collapse_{{ loop.index }}">
+  <div class="card card-body anchor">
+    <h3>Job Title</h3>
+    <p>{{ listing.job_title }}</p>
+    <h3>Salary</h3>
+    <p>&#65505;{{ listing.salary }}</p>
+    <h3>Location</h3>
+    <p>{{ listing.location }}</p>
+    <h3>Company Name</h3>
+    <p>{{ listing.company }}</p>
+    <h3>Experience Required</h3>
+    <p>{{ listing.experience_required }}</p>
+    <h3>Job Description</h3>
+    <p>{{ listing.job_description }}</p>
+    <h3>Requirements</h3>
+    <p>{{ listing.requirements }}</p>
+    <h3>Benefits</h3>
+    <p>{{ listing.benefits }}</p>
+    <!--Button for applying to listing -->
+    <div class="anchor-tags">
       <a href="{{ url_for('applicants_apply', listing_id=listing.id) }}" class="btn btn-success">Apply</a>
     </div>
-    </div>
   </div>
-  {% endfor %}
+</div>
+{% endfor %}
 
 {% endblock %}

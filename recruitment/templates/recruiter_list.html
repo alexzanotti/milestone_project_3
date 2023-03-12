@@ -9,61 +9,61 @@
 <!-- Form to list  -->
 
 <form method="POST" action="{{ url_for('recruiter_list') }}" class="job-listing">
-    <!-- Job title -->
-    <div class="mb-3">
-      <label for="job_title" class="form-label">Job Title</label>
-      <input type="text" class="form-control" id="job_title" name="job_title" placeholder="Enter Job Title" required>
-    </div>
-    <!-- Salary -->
-    <div class="mb-3">
-      <label for="salary" class="form-label">Salary</label>
-      <input type="number" class="form-control" id="salary" name="salary" placeholder="Enter Salary" required>
-    </div>
-    <!-- Location -->
-    <div class="mb-3">
-      <label for="location" class="form-label">Location</label>
-      <input type="text" class="form-control" id="location" name="location" placeholder="Enter Location" required>
-    </div>
-    <!-- Company Name -->
-    <div class="mb-3">
-      <label for="company" class="form-label">Company Name</label>
-      <input type="text" class="form-control" id="company" name="company" placeholder="Enter Company Name" required>
-    </div>
-    <!-- Expereince Required -->
-    <div class="mb-3">
-      <label for="experience_required" class="form-label">Experience Required</label>
-      <select class="form-select" aria-label="Default select example" id="experience_required" name="experience_required"
-        required>
-        <option value="" disabled selected>Select an option</option>
-        <option value="Up to 1 Year">Up to 1 Year</option>
-        <option value="1 - 2 Years">1 - 2 Years</option>
-        <option value="2 - 3 Years">2 - 3 Years</option>
-        <option value="3 - 4 Years">3 - 4 Years</option>
-        <option value="4 - 5 Years">4 - 5 Years</option>
-        <option value="Over 5 Years">Over 5 Years</option>
-      </select>
-    </div>
-    <!-- Job Description -->
-    <div class="mb-3">
-      <label for="job_description" class="form-label">Job Description</label>
-      <textarea class="form-control" id="job_description" name="job_description" placeholder="Enter Job Description"
-        rows="6" required></textarea>
-      </div>
-      <!-- Job Requirements -->
-      <div class="mb-3">
-        <label for="requirements" class="form-label">Job Requirements</label>
-        <textarea class="form-control" id="requirements" name="requirements" placeholder="Enter Job Requirements" rows="6"
-          required></textarea>
-        </div>
-        <!-- Job Benefits -->
-      
-      <div class="mb-3">
-        <label for="benefits" class="form-label">Job Benefits</label>
-        <textarea class="form-control" id="benefits" name="benefits" placeholder="Enter Job Benefits" rows="6"
-          required></textarea>
-      </div>
-      <!-- Button to open modal -->
-      <button class="btn btn-success" type="submit">List Job</button>
-  </form>
+  <!-- Job title -->
+  <div class="mb-3">
+    <label for="job_title" class="form-label">Job Title</label>
+    <input type="text" class="form-control" id="job_title" name="job_title" placeholder="Enter Job Title" required>
+  </div>
+  <!-- Salary -->
+  <div class="mb-3">
+    <label for="salary" class="form-label">Salary</label>
+    <input type="number" class="form-control" id="salary" name="salary" placeholder="Enter Salary" required>
+  </div>
+  <!-- Location -->
+  <div class="mb-3">
+    <label for="location" class="form-label">Location</label>
+    <input type="text" class="form-control" id="location" name="location" placeholder="Enter Location" required>
+  </div>
+  <!-- Company Name -->
+  <div class="mb-3">
+    <label for="company" class="form-label">Company Name</label>
+    <input type="text" class="form-control" id="company" name="company" placeholder="Enter Company Name" required>
+  </div>
+  <!-- Expereince Required -->
+  <div class="mb-3">
+    <label for="experience_required" class="form-label">Experience Required</label>
+    <select class="form-select" aria-label="Default select example" id="experience_required" name="experience_required"
+      required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="Up to 1 Year">Up to 1 Year</option>
+      <option value="1 - 2 Years">1 - 2 Years</option>
+      <option value="2 - 3 Years">2 - 3 Years</option>
+      <option value="3 - 4 Years">3 - 4 Years</option>
+      <option value="4 - 5 Years">4 - 5 Years</option>
+      <option value="Over 5 Years">Over 5 Years</option>
+    </select>
+  </div>
+  <!-- Job Description -->
+  <div class="mb-3">
+    <label for="job_description" class="form-label">Job Description</label>
+    <textarea class="form-control" id="job_description" name="job_description" placeholder="Enter Job Description"
+      rows="6" required></textarea>
+  </div>
+  <!-- Job Requirements -->
+  <div class="mb-3">
+    <label for="requirements" class="form-label">Job Requirements</label>
+    <textarea class="form-control" id="requirements" name="requirements" placeholder="Enter Job Requirements" rows="6"
+      required></textarea>
+  </div>
+  <!-- Job Benefits -->
+
+  <div class="mb-3">
+    <label for="benefits" class="form-label">Job Benefits</label>
+    <textarea class="form-control" id="benefits" name="benefits" placeholder="Enter Job Benefits" rows="6"
+      required></textarea>
+  </div>
+  <!-- Button to open modal -->
+  <button class="btn btn-success" type="submit">List Job</button>
+</form>
 
 {% endblock %}

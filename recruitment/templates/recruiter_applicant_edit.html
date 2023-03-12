@@ -8,60 +8,60 @@
 {% block content %}
 <!-- The users details are captured in the below form -->
 <div class="centered">
-<a href="{{ url_for('recruiter_applicants', listing_id=listing.id) }}" class="btn btn-success">Return to Applications</a>
+  <a href="{{ url_for('recruiter_applicants', listing_id=listing.id) }}" class="btn btn-success">Return to
+    Applications</a>
 </div>
 <div class="your-details">
-    <h2>Applicant Details</h2>
-    <form class="apply-form" method="POST" action="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}">
-      <!-- Applicants name -->
-      <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" name="name" value="{{ applicant.name }}" required>
-      </div>
-      <!-- Applicants phone number -->
-      <div class="mb-3">
-        <label for="phone" class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" id="phone" name="phone" value="{{ applicant.phone }}"
-          pattern="[0-9]{11}" required>
-      </div>
-      <!-- Applicants email address -->
-      <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" name="email" value="{{ applicant.email }}"
-          required>
-      </div>
-      <!-- Applicants experience level -->
-      <div class="mb-3">
-        <label for="experience_level" class="form-label">Experience Level</label>
-        <select class="form-select" id="experience_level" name="experience_level" aria-label="experience_level" required>
-          <option value="{{ applicant.experience_level }}" selected>{{ applicant.experience_level }}</option>
-          <option value="Up to 1 Year">Up to 1 Year</option>
-          <option value="1 - 2 Years">1 - 2 Years</option>
-          <option value="2 - 3 Years">2 - 3 Years</option>
-          <option value="3 - 4 Years">3 - 4 Years</option>
-          <option value="4 - 5 Years">4 - 5 Years</option>
-          <option value="Over 5 Years">Over 5 Years</option>
-        </select>
-      </div>
-      <!-- Applicants personal statement -->
-      <div class="mb-3">
-        <label for="personal_statement" class="form-label">Personal Statement</label>
-        <textarea class="form-control" id="personal_statement" name="personal_statement"
-        value="{{ applicant.personal_statement }}" rows="3" required>{{ applicant.personal_statement }}</textarea>
-      </div>
-      <!-- Applicants education -->
-      <div class="mb-3">
-        <label for="education" class="form-label">Education</label>
-        <textarea class="form-control" id="education" name="education" value="{{ applicant.education }}" rows="3"
-          required>{{ applicant.education }}</textarea>
-      </div>
-      <!-- Applicants work experience -->
-      <div class="mb-3">
-        <label for="work_experience" class="form-label">Work Experience</label>
-        <textarea class="form-control" id="work_experience" name="work_experience" value="{{ applicant.work_experience }}"
-          rows="3" required>{{ applicant.work_experience }}</textarea>
-      </div>
-      <button class="btn btn-warning" type="submit">Edit Application</button>
-    </form>
+  <h2>Applicant Details</h2>
+  <form class="apply-form" method="POST" action="{{ url_for('recruiter_applicant_edit', applicant_id=applicant.id) }}">
+    <!-- Applicants name -->
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="{{ applicant.name }}" required>
     </div>
-    {% endblock %}
+    <!-- Applicants phone number -->
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" id="phone" name="phone" value="{{ applicant.phone }}" pattern="[0-9]{11}"
+        required>
+    </div>
+    <!-- Applicants email address -->
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" value="{{ applicant.email }}" required>
+    </div>
+    <!-- Applicants experience level -->
+    <div class="mb-3">
+      <label for="experience_level" class="form-label">Experience Level</label>
+      <select class="form-select" id="experience_level" name="experience_level" aria-label="experience_level" required>
+        <option value="{{ applicant.experience_level }}" selected>{{ applicant.experience_level }}</option>
+        <option value="Up to 1 Year">Up to 1 Year</option>
+        <option value="1 - 2 Years">1 - 2 Years</option>
+        <option value="2 - 3 Years">2 - 3 Years</option>
+        <option value="3 - 4 Years">3 - 4 Years</option>
+        <option value="4 - 5 Years">4 - 5 Years</option>
+        <option value="Over 5 Years">Over 5 Years</option>
+      </select>
+    </div>
+    <!-- Applicants personal statement -->
+    <div class="mb-3">
+      <label for="personal_statement" class="form-label">Personal Statement</label>
+      <textarea class="form-control" id="personal_statement" name="personal_statement"
+        value="{{ applicant.personal_statement }}" rows="3" required>{{ applicant.personal_statement }}</textarea>
+    </div>
+    <!-- Applicants education -->
+    <div class="mb-3">
+      <label for="education" class="form-label">Education</label>
+      <textarea class="form-control" id="education" name="education" value="{{ applicant.education }}" rows="3"
+        required>{{ applicant.education }}</textarea>
+    </div>
+    <!-- Applicants work experience -->
+    <div class="mb-3">
+      <label for="work_experience" class="form-label">Work Experience</label>
+      <textarea class="form-control" id="work_experience" name="work_experience" value="{{ applicant.work_experience }}"
+        rows="3" required>{{ applicant.work_experience }}</textarea>
+    </div>
+    <button class="btn btn-warning" type="submit">Edit Application</button>
+  </form>
+</div>
+{% endblock %}
