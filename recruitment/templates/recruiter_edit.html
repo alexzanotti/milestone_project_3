@@ -38,6 +38,7 @@
       <label for="experience_required" class="form-label">Experience Required</label>
       <select class="form-select" aria-label="Default select example" id="experience_required"
         name="experience_required" size="1" required>
+        <!-- a value is needed for the selected field - this will cause a flask error if you remove the value -->
         <option selected value="{{ listing.experience_required }}">{{ listing.experience_required }}</option>
         <option value="Up to 1 Year">Up to 1 Year</option>
         <option value="1 - 2 Years">1 - 2 Years</option>

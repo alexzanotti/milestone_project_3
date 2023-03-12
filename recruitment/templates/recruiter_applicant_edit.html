@@ -35,6 +35,7 @@
     <div class="mb-3">
       <label for="experience_level" class="form-label">Experience Level</label>
       <select class="form-select" id="experience_level" name="experience_level" aria-label="experience_level" size="1" required>
+        <!-- a value is needed for the selected field - this will cause a flask error if you remove the value -->
         <option value="{{ applicant.experience_level }}" selected>{{ applicant.experience_level }}</option>
         <option value="Up to 1 Year">Up to 1 Year</option>
         <option value="1 - 2 Years">1 - 2 Years</option>
