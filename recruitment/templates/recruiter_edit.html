@@ -33,11 +33,11 @@
       <label for="company" class="form-label">Company Name</label>
       <input type="text" class="form-control" id="company" name="company" value="{{ listing.company }}" required>
     </div>
-    <!-- Expereince Required -->
+    <!-- Experience Required -->
     <div class="mb-3">
       <label for="experience_required" class="form-label">Experience Required</label>
       <select class="form-select" aria-label="Default select example" id="experience_required"
-        name="experience_required" required>
+        name="experience_required" size="1" required>
         <option selected value="{{ listing.experience_required }}">{{ listing.experience_required }}</option>
         <option value="Up to 1 Year">Up to 1 Year</option>
         <option value="1 - 2 Years">1 - 2 Years</option>

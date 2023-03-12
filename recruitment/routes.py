@@ -4,13 +4,19 @@ from flask import Flask, render_template, request, redirect, url_for
 from recruitment import app, db
 from recruitment.data_models import Listing, Applicant
 
+
 # Home Page
 @app.route("/")
 def index():
     images = []
     with open("recruitment/static/data/images.json", "r") as json_images:
         images = json.load(json_images)
-    return render_template("index.html", title="Home", header="Recruitment World", images=images)
+    return render_template(
+        "index.html",
+        title="Home",
+        header="Recruitment World",
+        images=images)
+
 
 # Applicants Page
 @app.route("/applicants")
@@ -22,6 +28,7 @@ def applicants():
         header="Applicants",
         applicants=applicants,
     )
+
 
 # Applicants Apply Page
 @app.route("/applicants_apply/<listing_id>", methods=["GET", "POST"])
@@ -43,7 +50,10 @@ def applicants_apply(listing_id):
         return redirect(url_for("applicants_applied"))
     else:
         return render_template(
-            "applicants_apply.html", title="Apply", header="Apply", listing=listing
+            "applicants_apply.html",
+            title="Apply",
+            header="Apply",
+            listing=listing
         )
 
 
@@ -62,7 +72,10 @@ def applicants_applied():
 def recruiter():
     recruiter = list(Listing.query.order_by(Listing.id).all())
     return render_template(
-        "recruiter.html", title="Recruiter", header="Recruiter", recruiter=recruiter
+        "recruiter.html",
+        title="Recruiter",
+        header="Recruiter",
+        recruiter=recruiter
     )
 
 
@@ -85,7 +98,9 @@ def recruiter_list():
         return redirect("recruiter_listed")
     else:
         return render_template(
-            "recruiter_list.html", title="Recruiter List", header="Recruiter List"
+            "recruiter_list.html",
+            title="Recruiter List",
+            header="Recruiter List"
         )
 
 
@@ -93,14 +108,20 @@ def recruiter_list():
 @app.route("/recruiter_listed")
 def recruiter_listed():
     return render_template(
-        "recruiter_listed.html", title="Recruiter Listed", header="Recruiter Listed"
+        "recruiter_listed.html",
+        title="Recruiter Listed",
+        header="Recruiter Listed"
     )
 
 
 # Recruiter Applicants Page
 @app.route("/recruiter_applicants/<int:listing_id>")
 def recruiter_applicants(listing_id):
-    listing = list(Listing.query.order_by(Listing.id).filter_by(id=listing_id).all())
+    listing = list(
+        Listing.query
+        .order_by(Listing.id)
+        .filter_by(id=listing_id)
+        .all())
     applicants = listing[0].applicants
     return render_template(
         "recruiter_applicants.html",
@@ -116,11 +137,13 @@ def recruiter_applicant_delete(applicant_id):
     applicant = Applicant.query.get_or_404(applicant_id)
     db.session.delete(applicant)
     db.session.commit()
-    return redirect(url_for("recruiter_applicants", listing_id=applicant.listing_id))
+    return redirect(
+        url_for("recruiter_applicants", listing_id=applicant.listing_id))
 
 
 # Recruiter Applicant Edit Page
-@app.route("/recruiter_applicant_edit/<int:applicant_id>", methods=["GET", "POST"])
+@app.route("/recruiter_applicant_edit/<int:applicant_id>", methods=["GET",
+                                                                    "POST"])
 def recruiter_applicant_edit(applicant_id):
     applicant = Applicant.query.get_or_404(applicant_id)
     listing = Listing.query.get_or_404(applicant.listing_id)
@@ -129,7 +152,8 @@ def recruiter_applicant_edit(applicant_id):
         applicant.phone = (request.form.get("phone"),)
         applicant.email = (request.form.get("email"),)
         applicant.experience_level = (request.form.get("experience_level"),)
-        applicant.personal_statement = (request.form.get("personal_statement"),)
+        applicant.personal_statement = (
+            request.form.get("personal_statement"),)
         applicant.education = (request.form.get("education"),)
         applicant.work_experience = request.form.get("work_experience")
         db.session.commit()
@@ -146,7 +170,8 @@ def recruiter_applicant_edit(applicant_id):
 
 
 # Recruiter Edit Page
-@app.route("/recruiter_edit/<int:listing_id>", methods=["GET", "POST"])
+@app.route("/recruiter_edit/<int:listing_id>", methods=["GET",
+                                                        "POST"])
 def recruiter_edit(listing_id):
     listing = Listing.query.get_or_404(listing_id)
     if request.method == "POST":
@@ -154,7 +179,8 @@ def recruiter_edit(listing_id):
         listing.salary = (request.form.get("salary"),)
         listing.location = (request.form.get("location"),)
         listing.company = (request.form.get("company"),)
-        listing.experience_required = (request.form.get("experience_required"),)
+        listing.experience_required = (
+            request.form.get("experience_required"),)
         listing.job_description = (request.form.get("job_description"),)
         listing.requirements = (request.form.get("requirements"),)
         listing.benefits = request.form.get("benefits")
@@ -183,12 +209,14 @@ def contact():
     if request.method == "POST":
         return redirect("contact_sent")
     else:
-        return render_template("contact.html", title="Contact", header="Contact")
+        return render_template(
+            "contact.html",
+            title="Contact",
+            header="Contact")
 
 
 # Contact Sent Page
 @app.route("/contact_sent")
 def contact_sent():
     return render_template(
-        "contact_sent.html", title="Contact Sent", header="Contact Sent"
-    )
+        "contact_sent.html", title="Contact Sent", header="Contact Sent")

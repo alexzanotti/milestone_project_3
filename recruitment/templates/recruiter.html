@@ -51,8 +51,8 @@
       <!--Buttons for editing the listing -->
       <a href="{{ url_for('recruiter_edit', listing_id=listing.id) }}" class="btn btn-warning">Edit Listing</a>
       <!--Buttons for deleting the listing - this opens the modal below -->
-      <a type="button" class="btn btn-danger" data-bs-toggle="modal"
-        data-bs-target="#deleteListing{{ loop.index }}">Delete Listing</a>
+      <a class="btn btn-danger" data-bs-toggle="modal"
+        data-bs-target="#deleteListing{{ loop.index }}" href="#deleteListing{{ loop.index }}">Delete Listing</a>
     </div>
   </div>
 </div>
