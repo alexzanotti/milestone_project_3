@@ -436,6 +436,15 @@ To deploy this page to GitHub Pages from its GitHub repository, the following st
 5. Under "Source" click the drop-down menu labelled "None" and select "Main".
 6. Upon selection, the page will automatically refresh meaning that the website is now deployed.
 
+### ElephantSQL Database hosting
+The database service called ElephantSQL was used to host the PostgreSQL database, following the below steps:
+
+1. Navigate to ElephantSQL.com and click “Get a managed database today”
+2. Select “Try now for FREE” in the TINY TURTLE database plan
+3. Select “Log in with GitHub” and authorize ElephantSQL with your selected GitHub account
+4. Create a new team form
+5. The URL is then used when setting up the Heroku App
+
 ## Deployment on Heroku  
 
 To deploy on Heroku, the following steps were taken:
