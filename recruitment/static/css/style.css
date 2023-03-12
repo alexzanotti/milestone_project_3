@@ -318,6 +318,15 @@ select {
     margin: 10px;
 }
 
+/* || Recruiter Listed Page Media Query */
+
+@media only screen and (max-width: 768px) {
+    .listed a {
+        margin: 10px;
+        display: block;
+    }
+}
+
 /* || Recruiter Applicants Page Media Queries */
 
 @media only screen and (max-width: 768px) {

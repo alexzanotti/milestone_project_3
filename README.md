@@ -249,20 +249,25 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 #### Footer Responsiveness
 - For smaller screens, the "About", "Links" and "Head Office Contact" sections are displayed in block.
 
-
 ## Home Page
 - The home page contains introductory text, describing the website
 - A Google Maps API is used to display where the offices are located
 - A Sectors section is used to display the sectors that the recruitment company is suited for
 - The Our Pages section is used to inform the user of the applicants and recruiter pages
+
 ## Home Page Responsiveness
+- The width of elements increase as the screen gets smaller
+- The Our Sectors section moves from 4 columns, to 2 columns, down to 1 column, as the screen size decreases
+- The Our Pages cards go from 2 columns, down to 1 column, as the screen size decreases
 
 ## Applicant Page
 - the applicants page holds anchor elements for each job listing
 - the anchor elements contain the following data: Job Title, Salary, Location, Company Name
 - when clicking on a anchor element, a collapsible section appears, containing full data about the job listing
 - within each collapsible, an apply button is presented, allowing the applicant to apply to the listing
+
 ## Applicant Page Responsiveness
+- The width of each job listing increases as the screen size decreases
 
 ## Recruiter Page 
 - a listing button is presented, which takes the recruiter to the recruiter list page
@@ -272,7 +277,9 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 - within each collapsible, an edit listing button is presented, taking the recruiter to the recruiter edit page
 - within each collapsible, a delete listing button is presented, allowing the applicant to delete to the listing
 - a modal is presented when clicking the delete button, to allow the recruiter an opportunity to confirm that they want to delete the listing
+
 ## Recruiter Page Responsiveness
+- The width of each job listing increases as the screen size decreases
 
 ## Contact Page
 - The contact page contains a form that the user is able to complete. It asked for their Name, Email, Query Type and Message.
@@ -283,22 +290,73 @@ The Surface Plane of the website is designed to provide a visually engaging and 
 - a return to homepage button is presented, redirecting the user to the home page
 - a applicants page button is presented, redirecting the user to the applicants page
 - a recruitment page button is presented, redirecting the user to the recruiter page
+
 ## Contact Sent Responsiveness
+- The buttons are block displayed for small screens
 
 ## Applicant Applied Page
+- A confirmation message is displayed to the user
+- a return to homepage button is presented, redirecting the user to the home page
+- a applicants page button is presented, redirecting the user to the applicants page
+- a contact page button is presented, redirecting the user to the contact page
+
 ## Applicant Applied Responsiveness 
+- The buttons are block displayed for small screens
+
+
 ## Applicant Apply Page
+- An anchor element is present, for the job listing
+- the anchor element contains the Job Title heading
+- when clicking on a anchor element, a collapsible section appears, containing full data about the job listing
+- there is a your details form, which collects data from the applicant
+- there is an apply button, which submits the data and redirects the user to the applicant applied page
+
 ## Applicant Apply Responsiveness
+- the job title anchor element increases in width as the screen size decreases
+- the Your Details form increases in width as the screen size decreases
+
 ## Recruiter Applicant Page
+- a return to recruiter button is presented, which takes the recruiter to the recruiter page
+- the anchor elements contain the following data: name, phone, email & experience level
+- when clicking on a anchor element, a collapsible section appears, containing full data about the applicant
+- within each collapsible, an edit application button is presented, taking the recruiter to the recruiter applicant edit page
+- within each collapsible, a delete application button is presented, allowing the applicant to be deleted from the listing
+- a modal is presented when clicking the delete button, to allow the recruiter an opportunity to confirm that they want to delete the application
+
 ## Recruiter Applicant Responsiveness
+- The width of each application increases as the screen size decreases
+
 ## Recruiter Applicant Edit Page
+- a return to application button is presented, which takes the recruiter to the recruiter applicants page
+- the Applicant Details form is presented, which is pre-populated with the applicant details
+- an edit application button is at the bottom of the form, which will update an data and return the user to the Recruiter Applicants page
+
 ## Recruiter Applicant Edit Responsiveness
+- The width of the Applicant Details form increases as the screen size decreases
+
 ## Recruiter Edit Page
+- a return to recruiter page button is presented, which takes the recruiter to the recruiter page
+- a form is presented, which is pre-populated with the listing details 
+- an edit listing button is at the bottom of the form, which will update an data and return the user to the Recruiter page
+
 ## Recruiter Edit Responsiveness
+- The width of the listing Details form increases as the screen size decreases
+
 ## Recruiter List Page
+- a listing form is presented, which allows the recruiter to enter data for the job listing
+
 ## Recruiter List Responsiveness
+- The width of the listing Details form increases as the screen size decreases
+
 ## Recruiter Listed Page
+- A confirmation message is displayed to the user
+- a return to homepage button is presented, redirecting the user to the home page
+- a recruitment page button is presented, redirecting the user to the recruiter page
+- a contact page button is presented, redirecting the user to the contact page
+
 ## Recruiter Listed Responsiveness
+- The buttons are block displayed for small screens
+
 
 # Testing
 
@@ -357,6 +415,7 @@ This test type ensures that the application meets the requirements of the user s
 
 #### HTML Validator
 This automated test type checks the HTML code for errors and warnings. The HTML Validator tool (validator.w3.org) checks for proper markup, syntax errors, and other issues that can cause problems with the rendering of web pages. It provides a detailed report of errors and warnings, allowing developers to fix them quickly.
+It was noted that due to the flask/jinja templating syntax, this causes a lot of "errors" within the validator - however this was due to the template logic itself, which is not html (causing the errors)
 
 #### CSS Validator
 This automated test type checks the CSS code for errors and warnings. The CSS Validator tool (jigsaw.w3.org/css-validator/) checks for syntax errors, compliance with CSS standards, and other issues that can cause problems with the appearance and layout of web pages. It provides a detailed report of errors and warnings, allowing developers to fix them quickly.
@@ -377,7 +436,6 @@ To deploy this page to GitHub Pages from its GitHub repository, the following st
 4. Scroll down the Settings page to the "Pages" section.
 5. Under "Source" click the drop-down menu labelled "None" and select "Main".
 6. Upon selection, the page will automatically refresh meaning that the website is now deployed.
-7. Scroll back down to the "Pages" section to retrieve the deployed link.
 
 ## Deployment on Heroku  
 
